@@ -12,6 +12,7 @@
     position: -webkit-sticky;
     top: 0;
     z-index: 9999;
+
     .admin-bar & {
         top: 32px;
 
@@ -19,15 +20,19 @@
             top: 46px;
         }
     }
-
 }
 
 /* navbar */
 .usa-navbar {
-    width: auto ;
+    width: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: 8rem;
 
     @media screen and (min-width: 951px){
       width: auto;
+      padding-top: 0;
+      padding-bottom: 0;
     }
 }
 
@@ -52,6 +57,20 @@
     }
 }
 
+.usa-menu-btn {
+    margin-right: 1.5rem;
+    border-radius: 0 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: auto;
+    color: #50316F;
+    background-color: #F3DDED;
+
+    &:hover {
+        color: #FFFFFF;
+        background-color: #50316F;
+    }
+}
 
 .usa-accordion-button.usa-nav-link.child-active > span{
     border-bottom: 0.7rem solid $color-primary;
