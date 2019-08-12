@@ -27,12 +27,7 @@ $sticky = get_theme_mod('navbar_sticky_setting', 'no') == 'yes' ? 'sticky' : '';
 
           wp_nav_menu($args);
         ?>
-<<<<<<< HEAD
-        <div></div>
-        <ul id="translate-navigation" class="usa-nav__primary usa-accordion">
-=======
         <ul id="translate-navigation" class="usa-nav__primary usa-accordion notranslate" style="margin-top: 0;">
->>>>>>> search
           <li class="usa-nav__primary-item">
             <button class="usa-accordion__button usa-nav__link usa-nav__translate" aria-expanded="false" aria-controls="translations">
               <?php include(get_template_directory() . '/assets/frontend/img/globe-americas.svg'); ?>
