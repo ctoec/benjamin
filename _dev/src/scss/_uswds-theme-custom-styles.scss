@@ -214,6 +214,45 @@ button.gsc-search-button {
 
 /*
 ----------------------------------------
+Footer
+----------------------------------------
+*/
+
+.footer-list {
+  @include u-font('sans', '2xs');
+  
+  ul {
+    @extend .usa-list;
+    @extend .usa-list--unstyled;
+  }
+
+  li {
+    &:not(:first-child) {
+      @include u-margin-top('2');
+    }
+  }
+
+  a {
+    @include u-color('white');
+    @include u-text('no-underline');
+
+    &:hover {
+      @include u-text('underline');
+    }
+  }
+
+  .notranslate {
+    @include u-display('flex');
+
+    li {
+      @include u-margin-top('0');
+      @include u-margin-right('2');
+    }
+  }
+}
+
+/*
+----------------------------------------
 Scroll to top
 ----------------------------------------
 */

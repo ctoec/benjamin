@@ -49,5 +49,37 @@ function remove_menus() {
 }
 add_action( 'admin_menu', 'remove_menus' );
 
+add_action( 'widgets_init', 'footer_left' );
+function footer_left() {
+  $args = array(
+    'name'          => 'Footer Nav Left',
+    'id'            => 'footer-left',
+    'description'   => 'The first column of nav items in the footer',
+    'class'         => '',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '' 
+  );
+
+  register_sidebar( $args );
+}
+
+add_action( 'widgets_init', 'footer_right' );
+function footer_right() {
+  $args = array(
+    'name'          => 'Footer Nav Right',
+    'id'            => 'footer-right',
+    'description'   => 'The second column of nav items in the footer',
+    'class'         => '',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '' 
+  );
+
+  register_sidebar( $args );
+}
+
 // Don't need to have primary taxonomy in Yoast
 add_filter( 'wpseo_primary_term_taxonomies', '__return_empty_array' );

@@ -4,9 +4,9 @@ $sticky = get_theme_mod('navbar_sticky_setting', 'no') == 'yes' ? 'sticky' : '';
 
 <div class="usa-overlay"></div>
 <header class="usa-header border-bottom border-primary-lighter" role="banner">
-  <div class="tablet:padding-y-05 tablet:padding-x-2">
+  <div class="padding-y-2 padding-x-2 tablet:padding-x-4">
     <div class="display-flex flex-align-center">
-      <div class="padding-x-2 desktop:padding-x-0 padding-y-2 flex-fill">
+      <div class="flex-fill">
         <?php benjamin_navbar_brand(); ?>
       </div>
       <button class="usa-menu-btn">Menu</button>
