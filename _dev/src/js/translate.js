@@ -16,10 +16,17 @@ window.TranslateInit = function() {
         pageLanguage: googleTranslateConfig.lang,
     });
 
-    TranslateEventHandler('click', '[data-google-lang]', function (e) {
-        TranslateCookieHandler("/" + googleTranslateConfig.lang + "/" + e.target.getAttribute("data-google-lang"), googleTranslateConfig.domain);
-        window.location.reload();
-    });
+    let links = document.querySelectorAll("a[data-google-lang]");
+    links.forEach(function(link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            TranslateCookieHandler("/" + googleTranslateConfig.lang + "/" + link.getAttribute("data-google-lang"), googleTranslateConfig.domain);
+
+            window.location.reload();
+        });
+    })
 }
 
 function TranslateGetCode() {
@@ -41,11 +48,5 @@ function TranslateCookieHandler(val, domain) {
 
     Cookies.set("googtrans", val, {
         domain: "." + domain,
-    });
-}
-
-function TranslateEventHandler(event, el, handler) {
-    document.addEventListener(event, function (e) {
-        if (e.target.closest(el)) handler(e);
     });
 }
