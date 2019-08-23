@@ -83,3 +83,41 @@ function footer_right() {
 
 // Don't need to have primary taxonomy in Yoast
 add_filter( 'wpseo_primary_term_taxonomies', '__return_empty_array' );
+
+// Adds custom taxonomy field to newsletter form
+add_filter( 'gform_pre_render', 'populate_interests' );
+add_filter( 'gform_pre_validation', 'populate_interests' );
+add_filter( 'gform_pre_submission_filter', 'populate_interests' );
+add_filter( 'gform_admin_pre_render', 'populate_interests' );
+function populate_interests( $form ) {
+ 
+    foreach ( $form['fields'] as &$field ) {
+        if ( $field->type != 'checkbox' || strpos( $field->cssClass, 'populate-interests' ) === false ) {
+          continue;
+        }
+
+        // Get all of the top level news categories
+        $args = [
+          'taxonomy'     => 'news-category',
+          'parent'        => 0,
+          'hide_empty'    => false           
+        ];
+ 
+        // you can add additional parameters here to alter the posts that are retrieved
+        // more info: http://codex.wordpress.org/Template_Tags/get_posts
+        $interests = get_terms($args);
+        $choices = array();
+ 
+        foreach ( $interests as $interest ) {
+          $term_meta = get_option( "taxonomy_term_$interest->term_id" );
+          $choices[] = array( 'text' => $interest->name, 'value' => '1', 'checked' => true, 'description' => $interest->description );
+        }
+ 
+        // update 'Select a Post' to whatever you'd like the instructive option to be
+        $field->placeholder = 'Select a Post';
+        $field->choices = $choices;
+ 
+    }
+ 
+    return $form;
+}

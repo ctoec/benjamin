@@ -78,7 +78,7 @@ if (!$hide_content) :
                         </div>
                     </div>
                 </div>
-                <?php get_template_part('template-parts/forms/news', 'none'); ?>
+                <?php dynamic_sidebar( 'news-widget' ); ?> 
             </div>
             <?php
             if($sidebar_position == 'right'):
