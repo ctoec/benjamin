@@ -63,6 +63,42 @@ i.e.
 
 /*
 ----------------------------------------
+Gravity Forms
+----------------------------------------
+*/
+.gfield_label {
+    @extend .usa-label;
+}
+
+.ginput_container_text {
+    input {
+        @extend .usa-input;
+    }
+}
+
+.gform_footer {
+    padding-top: 1rem;
+}
+
+.gform_button {
+    @extend .usa-button;
+}
+
+.ginput_container_checkbox {
+    margin-top: 0.5rem;
+}
+
+.gfield_checkbox {
+    label {
+        @extend .usa-checkbox__label;
+    }
+    input {
+        @extend .usa-checkbox__input;
+    }
+}
+
+/*
+----------------------------------------
 Search filter
 ----------------------------------------
 */
@@ -75,6 +111,8 @@ Search filter
   @extend .usa-form;
 }
 
+.gform_fields,
+.gform_fields ul,
 .searchandfilter ul,
 .sf_date_field {
   @include unstyled-list;

@@ -78,7 +78,9 @@ if (!$hide_content) :
                         </div>
                     </div>
                 </div>
-                <?php dynamic_sidebar( 'news-widget' ); ?> 
+                <div class="margin-top-8">
+                    <?php dynamic_sidebar( 'news-widget' ); ?> 
+                </div>
             </div>
             <?php
             if($sidebar_position == 'right'):
