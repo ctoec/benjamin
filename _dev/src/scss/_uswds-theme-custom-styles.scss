@@ -61,6 +61,21 @@ i.e.
   margin-top: 0;
 }
 
+a[href*="youtube.com"] {
+    &::after {
+        display: inline-block;
+        content: '';
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBkPSJNMzcxLjcgMjM4bC0xNzYtMTA3Yy0xNS44LTguOC0zNS43IDIuNS0zNS43IDIxdjIwOGMwIDE4LjQgMTkuOCAyOS44IDM1LjcgMjFsMTc2LTEwMWMxNi40LTkuMSAxNi40LTMyLjggMC00MnpNNTA0IDI1NkM1MDQgMTE5IDM5MyA4IDI1NiA4UzggMTE5IDggMjU2czExMSAyNDggMjQ4IDI0OCAyNDgtMTExIDI0OC0yNDh6bS00NDggMGMwLTExMC41IDg5LjUtMjAwIDIwMC0yMDBzMjAwIDg5LjUgMjAwIDIwMC04OS41IDIwMC0yMDAgMjAwUzU2IDM2Ni41IDU2IDI1NnoiLz48L3N2Zz4=");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        width: 15px;
+        height: 15px;
+        vertical-align: middle;
+        margin-left: 4px;
+    }
+}
+
 /*
 ----------------------------------------
 Gravity Forms
