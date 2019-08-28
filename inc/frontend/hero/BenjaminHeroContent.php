@@ -131,7 +131,7 @@ class BenjaminHeroContent
         $output .= '<h1 class="hero__title">'
             . benjamin_get_post_format_icon( get_post_format() ) . get_the_title()
             . '</h1>';
-        
+
         if ( 'page' !== get_post_type() ) {
             $output .= '<div class="post-meta">';
             $output .= benjamin_get_hero_meta();
@@ -580,6 +580,7 @@ class BenjaminHeroContent
 
                 if ( trim($description) !== '' || is_customize_preview() )
                     $output .= '<p class="hero__sub-title">' . $description . '</p>';
+                */
 
                 if( !is_null( $id ) && $id != 0 )
                     $output .= '<a class="usa-button usa-button-big usa-button-secondary"

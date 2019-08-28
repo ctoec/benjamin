@@ -27,7 +27,6 @@ extract( benjamin_template_settings() );
 if( !$hide_content ):
 ?>
 
-
 <section id="primary" class="grid-container">
     <?php
         if($sidebar_position == 'left'):
@@ -40,13 +39,6 @@ if( !$hide_content ):
             benjamin_page_sortables('frontpage_sortables_setting');
         ?>
     </div>
-
-    <?php
-        if($sidebar_position == 'right'):
-          benjamin_get_sidebar($template, $sidebar_position, $sidebar_size);
-        endif;
-    ?>
-
 </section>
 
 <?php
