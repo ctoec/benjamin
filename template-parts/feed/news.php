@@ -9,8 +9,10 @@
 
  $cats = get_the_terms($id, 'news-category');
 
- foreach ( $cats as $cat ) {
-    $categories[] = $cat->name;
+ if ($cats) {
+    foreach ( $cats as $cat ) {
+        $categories[] = $cat->name;
+    }
  }
 
  $date = get_the_date();
