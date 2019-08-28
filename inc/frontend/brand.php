@@ -5,7 +5,7 @@ function benjamin_get_navbar_brand()
     $output = '';
     $output .= '<div id="logo">';
         $output .= '<a href="' . esc_url(home_url()) . '" class="display-block">';
-            $output .= '<img src="' . get_template_directory_uri() . '/assets/frontend/img/logo.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-6" />';
+            $output .= '<img src="' . get_template_directory_uri() . '/assets/frontend/img/logo.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-4 tablet:height-6" />';
         $output .= '</a>';
     $output .= '</div>';
 

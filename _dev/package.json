@@ -1,6 +1,10 @@
 {
-  "name": "Benjamin",
+  "name": "ctoec",
   "version": "1.0.0",
+  "scripts": {
+    "watch": "gulp watch",
+    "build": "gulp build"
+  },
   "devDependencies": {
     "autoprefixer": "^9.6.0",
     "css-mqpacker": "^7.0.0",
@@ -14,9 +18,11 @@
     "gulp-sourcemaps": "^2.6.5",
     "path": "^0.12.7",
     "uswds": "^2.0.3",
-    "uswds-gulp": "github:uswds/uswds-gulp"
+    "uswds-gulp": "github:uswds/uswds-gulp",
+    "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "js-cookie": "^2.2.0"
   }
 }

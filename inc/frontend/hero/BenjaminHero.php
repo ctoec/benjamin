@@ -51,10 +51,6 @@ class BenjaminHero {
             $this->currentpage = 'fallback';
         }
 
-
-        $this->HeroContent    = new BenjaminHeroContent(null, $this->template, $this->currentpage);
-        $this->HeroBackground = new BenjaminHeroBG(null, $this->template, $this->currentpage);
-
         $this->HeroBackground->getBackground();
     }
 

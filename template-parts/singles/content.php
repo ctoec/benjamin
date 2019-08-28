@@ -6,10 +6,20 @@
  *
  * @package Benjamin
  */
+    $cats = get_the_terms($id, 'news-category');
 
+    foreach ( $cats as $cat ) {
+    $categories[] = $cat->name;
+    }
+
+    $date = get_the_date();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
+    <div>
+        <div class="font-sans-md text-bold"><?php echo implode(", ", $categories); ?></div>
+        <div class="font-sans-md"><?php the_date('m/d/Y'); ?></div>
+    </div>
 
     <?php if (get_post_format()) : ?>
     <div class="post-content entry-content col-md-12">

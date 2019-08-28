@@ -41,6 +41,7 @@ if(!defined('BENJAMIN_POST_FORMATS')) {
 
 require_once get_template_directory() . '/post-types/news-updates.php';
 require_once get_template_directory() . '/post-types/forms-documents.php';
+require_once get_template_directory() . '/template-parts/forms/gravity.php';
 require_once get_template_directory() . '/inc/_inc.php';
 
 // We don't need posts currently
@@ -49,8 +50,78 @@ function remove_menus() {
 }
 add_action( 'admin_menu', 'remove_menus' );
 
+add_action( 'widgets_init', 'footer_left' );
+function footer_left() {
+  $args = array(
+    'name'          => 'Footer Nav Left',
+    'id'            => 'footer-left',
+    'description'   => 'The first column of nav items in the footer',
+    'class'         => '',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '' 
+  );
+
+  register_sidebar( $args );
+}
+
+add_action( 'widgets_init', 'footer_right' );
+function footer_right() {
+  $args = array(
+    'name'          => 'Footer Nav Right',
+    'id'            => 'footer-right',
+    'description'   => 'The second column of nav items in the footer',
+    'class'         => '',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '' 
+  );
+
+  register_sidebar( $args );
+}
+
 // Don't need to have primary taxonomy in Yoast
 add_filter( 'wpseo_primary_term_taxonomies', '__return_empty_array' );
+
+// Adds custom taxonomy field to newsletter form
+add_filter( 'gform_pre_render', 'populate_interests' );
+add_filter( 'gform_pre_validation', 'populate_interests' );
+add_filter( 'gform_pre_submission_filter', 'populate_interests' );
+add_filter( 'gform_admin_pre_render', 'populate_interests' );
+function populate_interests( $form ) {
+ 
+    foreach ( $form['fields'] as &$field ) {
+        if ( $field->type != 'checkbox' || strpos( $field->cssClass, 'populate-interests' ) === false ) {
+          continue;
+        }
+
+        // Get all of the top level news categories
+        $args = [
+          'taxonomy'     => 'news-category',
+          'parent'        => 0,
+          'hide_empty'    => false           
+        ];
+ 
+        // you can add additional parameters here to alter the posts that are retrieved
+        // more info: http://codex.wordpress.org/Template_Tags/get_posts
+        $interests = get_terms($args);
+        $choices = array();
+ 
+        foreach ( $interests as $interest ) {
+          $term_meta = get_option( "taxonomy_term_$interest->term_id" );
+          $choices[] = array( 'text' => $interest->name, 'value' => '1', 'checked' => true, 'description' => $interest->description );
+        }
+ 
+        // update 'Select a Post' to whatever you'd like the instructive option to be
+        $field->placeholder = 'Select a Post';
+        $field->choices = $choices;
+ 
+    }
+ 
+    return $form;
+}
 
 function homepage_content_init() {
 	register_sidebar( array(
@@ -74,7 +145,6 @@ function homepage_sidebar_init() {
         'after_title'   => '</h3>',
     ) );
 }
-
 add_action( 'widgets_init', 'homepage_sidebar_init' );
 
 ?>

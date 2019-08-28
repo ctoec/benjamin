@@ -20,36 +20,45 @@ get_header();
  */
 
 extract(benjamin_template_settings());
-
-
+$template = 'news-sidebar';
 if (! $hide_content) :
 ?>
-
-<section id="breadcrumbs" class="usa-grid usa-section usa-section--smallVerticalSpacing">
-    <?php
-        if ( function_exists('yoast_breadcrumb') ) {
-            yoast_breadcrumb( '<div class="breadcrumbs">','</div>' );
-        }
-    ?>
-</section>
-<section id="primary" class="usa-grid usa-section usa-section--withBreadcrumb">
-    <div class="main-content <?php echo esc_attr($main_width); ?>">
-        <header class="entry-header">
-            <h1><?php the_title(); ?></h1>
-            <div class="entry-updated">Published on <?php the_date() ?></div>
-        </header>
+<section id="primary">
+    <div class="grid-container margin-top-4">
         <?php
-        while (have_posts()) :
-            the_post();
-
-            get_template_part('template-parts/singles/content');
-
-        endwhile; // End of the loop.
+            if ( function_exists('yoast_breadcrumb') ) {
+                yoast_breadcrumb( '<div class="breadcrumbs">','</div>' );
+            }
         ?>
+    </div>
+    <div class="grid-container margin-top-4">
+        <div class="grid-row grid-gap">
+            <?php
+            if($sidebar_position == 'left'):
+                benjamin_get_sidebar($template, $sidebar_position, $sidebar_size);
+            endif;
+            ?>
+            <div class="usa-prose <?php echo esc_attr($main_width); ?>">
+                <h1 class="text-violet-70v font-sans-xl text-normal margin-top-10"><?php the_title(); ?></h1>
+                <?php
+                    while (have_posts()) :
+                        the_post();
+            
+                        get_template_part('template-parts/singles/content');
+            
+                    endwhile; // End of the loop.
+                ?>
+                <?php get_template_part('template-parts/forms/news', 'none'); ?>
+            </div>
+            <?php
+            if($sidebar_position == 'right'):
+                benjamin_get_sidebar($template, $sidebar_position, $sidebar_size);
+            endif;
+            ?>
+        </div>
     </div>
 </section>
 
 <?php
 endif;
-
 get_footer();

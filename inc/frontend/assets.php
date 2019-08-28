@@ -19,7 +19,7 @@ function benjamin_scripts() {
     // are included with this theme.
 
 	wp_enqueue_script(
-        'benjamin', BENJAMIN_FRONTEND_ASSETS_DIR .'js/uswds-min.js',
+        'benjamin', BENJAMIN_FRONTEND_ASSETS_DIR .'js/uswds.js',
          null, null, true
     );
     wp_enqueue_style( 'dashicons' );

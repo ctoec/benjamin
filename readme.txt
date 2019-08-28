@@ -78,7 +78,6 @@ digital government services.
 == Documentation for footer settings ==
 * There are draggable, sortable widget areas which can be ordered
 * Sortables include:
-* a return to top row
 * a footer menu row (set by the "footer" menu location)
 * and 2 widget area rows
 

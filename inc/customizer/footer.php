@@ -14,17 +14,14 @@
 
 function benjamin_footer_settings($wp_customize)
 {
-    $return_label = __('Return to top', 'benjamin');
     $footer_label = __('Footer menu', 'benjamin');
 
     $default_json = '[';
-    $default_json .= '{"name":"return-to-top","label":"' . $return_label . '"},';
     $default_json .= '{"name":"footer-menu","label":"' . $footer_label . '"}';
     $default_json .= ']';
 
 
     $choices = array(
-        'return-to-top' => __('Return to Top', 'benjamin'),
         'footer-menu' => __('Footer Menu', 'benjamin'),
         'widget-area-1' => __('Widget Area 1', 'benjamin'),
         'widget-area-2' => __('Widget Area 2', 'benjamin'),

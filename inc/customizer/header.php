@@ -4,7 +4,7 @@
 /**
  * Header Settings
  *
- * These settings include ordering the header area (banner, hero,) and the
+ * These settings include ordering the header area (banner,) and the
  * navbar size
  * @param  [type] $wp_customize [description]
  * @return [type]               [description]
@@ -14,11 +14,9 @@ function benjamin_header_settings($wp_customize)
 
     $banner_label = __('Banner', 'benjamin');
     $navbar_label = __('Navbar', 'benjamin');
-    $hero_label = __('Hero', 'benjamin');
     $default_json = '[';
     $default_json .= '{"name":"banner","label": "' . $banner_label . '"}, ';
     $default_json .= '{"name":"navbar","label":"' . $navbar_label . '"}, ';
-    $default_json .= '{"name":"hero","label":"' . $hero_label . '"}';
     $default_json .= ']';
 
     // the section
@@ -41,7 +39,6 @@ function benjamin_header_settings($wp_customize)
     // header size
     $header_components = array(
         'navbar' => __('Navbar', 'benjamin'),
-        'hero' => __('Hero', 'benjamin'),
         'banner' => __('Banner', 'benjamin')
     );
 

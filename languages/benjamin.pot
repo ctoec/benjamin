@@ -130,17 +130,10 @@ msgstr ""
 msgid "%s "
 msgstr ""
 
-#: ../inc/customizer/footer.php:17, ../inc/shared/set-default-settings.php:17, ../inc/frontend/footers/footer-return.php:6
-msgid "Return to top"
-msgstr ""
-
 #: ../inc/customizer/footer.php:18, ../inc/shared/set-default-settings.php:18
 msgid "Footer menu"
 msgstr ""
 
-#: ../inc/customizer/footer.php:27
-msgid "Return to Top"
-msgstr ""
 
 #: ../inc/customizer/footer.php:28
 msgid "Footer Menu"

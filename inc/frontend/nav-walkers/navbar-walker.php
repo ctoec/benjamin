@@ -13,7 +13,7 @@ class BenjaminNavbarWalker extends Walker_Nav_Menu {
 		$output .= '<ul class="usa-nav__submenu" id="'.$id.'" hidden>';
 	}
 
-    public function end_lvl( &$output, $depth = 0, $args = array() ) {
+    public function end_lvl( &$output, $depth = 0, $args = array() ) {        
         $output .= '</ul>';
     }
 

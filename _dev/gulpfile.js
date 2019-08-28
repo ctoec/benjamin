@@ -25,6 +25,7 @@ var sass          = require('gulp-sass');
 var sourcemaps    = require('gulp-sourcemaps');
 var uswds         = require('./node_modules/uswds-gulp/config/uswds');
 var browserSync   = require('browser-sync');
+var webpack       = require('webpack-stream');
 var reload        = browserSync.reload;
 
 /*
@@ -78,6 +79,9 @@ PATHS
 // Project Sass source directory
 const PROJECT_SASS_SRC = './src/scss';
 
+// Project JS source directory
+const PROJECT_JS_SRC = './src/js';
+
 // Images destination
 const IMG_DEST = '../assets/frontend/img';
 
@@ -114,6 +118,19 @@ gulp.task('copy-uswds-images', () => {
 gulp.task('copy-uswds-js', () => {
   return gulp.src(`${uswds}/js/**/**`)
   .pipe(gulp.dest(`${JS_DEST}`));
+});
+
+gulp.task('build-js', function(done) {
+  return gulp.src([
+      `${PROJECT_JS_SRC}/uswds.js`
+    ])
+    .pipe(webpack({
+      output: {
+        filename: 'uswds.js',
+      },
+      mode: 'production'
+    }))
+    .pipe(gulp.dest(JS_DEST));
 });
 
 gulp.task('build-sass', function(done) {
@@ -170,10 +187,13 @@ gulp.task('init', gulp.series(
   'build-sass',
 ));
 
-gulp.task('watch-sass', function () {
+gulp.task('watch-assets', function () {
+  gulp.watch(`${PROJECT_JS_SRC}/**/*.js`, gulp.series('build-js'));
   gulp.watch(`${PROJECT_SASS_SRC}/**/*.scss`, gulp.series('build-sass'));
 });
 
-gulp.task('watch', gulp.series('build-sass', 'watch-sass'));
+gulp.task('watch', gulp.series('build-sass', 'build-js', 'watch-assets'));
+
+gulp.task('build', gulp.series('build-sass', 'build-js'));
 
 gulp.task('default', gulp.series('watch'));

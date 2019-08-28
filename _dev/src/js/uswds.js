@@ -1,3 +1,3 @@
 require('uswds');
-require('./mobile-video-bg');
-require('./resize-hero');
+require('./scroll-to-top');
+require('./translate');

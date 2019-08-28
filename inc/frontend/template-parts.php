@@ -53,13 +53,6 @@ function benjamin_the_header() {
             case 'navbar':
                 require get_template_directory() . '/inc/frontend/navbars/navbar.php';
                 break;
-            case 'hero':
-                if (!is_singular()) {
-                    $hero = new BenjaminHero($template);
-                    echo $hero; //WPCS: xss ok.
-                }
-    
-                break;
         endswitch;
     endforeach;
 }
@@ -84,9 +77,6 @@ function benjamin_the_footer() {
         $name = $s->name;
 
         switch($name):
-            case 'return-to-top':
-                require get_template_directory() . '/inc/frontend/footers/footer-return.php';
-                break;
             case 'footer-menu':
                 require get_template_directory() . '/inc/frontend/footers/footer-menu.php';
                 break;

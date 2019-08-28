@@ -127,6 +127,17 @@ function benjamin_the_template_list($use_widget_areas = false, $add_default = fa
                 'the widgetizted page'
             )
         ),
+        'search-reults' => array(
+            'label' => __('Search Results', 'benjamin'),
+            'description' => sprintf(
+                /* translators:  warning about activating the widget areas. */
+                __(
+                    'This is just an extra page template, use this if you want to style an individual page differently then your standard pages. %s',
+                    'benjamin'
+                ),
+                $desc_warning
+            )
+        ),
         'template-1' => array(
             'label' => __('Page Template 1', 'benjamin'),
             'description' => sprintf(
