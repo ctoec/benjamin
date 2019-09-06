@@ -20,6 +20,20 @@ i.e.
 ----------------------------------------
 */
 
+.b {
+    left: 50%;
+    position: relative;
+    transform: translate(-50%,0);
+    width: 100vw;
+
+    &--hero {
+        background-position: top right;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-color: #61366E;
+    }
+}
+
 .usa-prose,
 .breadcrumbs {
   a:link,
