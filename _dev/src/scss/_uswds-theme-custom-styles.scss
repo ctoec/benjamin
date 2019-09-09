@@ -32,6 +32,24 @@ i.e.
         background-repeat: no-repeat;
         background-color: #61366E;
     }
+
+    &--cta {
+        a {
+            color: #ffffff;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &--commisioner {
+        background-image: radial-gradient(53% 103%, #75B1E6 0%, #2378C3 100%);
+    }
 }
 
 .usa-prose,
