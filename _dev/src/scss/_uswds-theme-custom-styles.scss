@@ -33,6 +33,12 @@ i.e.
         background-color: #61366E;
     }
 
+    .text-white {
+        a {
+            color: #ffffff !important;
+        }
+    }
+
     &--cta {
         a {
             color: #ffffff;
@@ -47,7 +53,8 @@ i.e.
         }
     }
 
-    &--commisioner {
+    &--commissioner {
+        background-color: #2378C3;
         background-image: radial-gradient(53% 103%, #75B1E6 0%, #2378C3 100%);
     }
 }

@@ -12,7 +12,7 @@
 ?>
 
 </main><!-- #usa-prose -->
-<footer class="bg-primary-dark margin-top-5" role="contentinfo">
+<footer class="bg-primary-dark" role="contentinfo">
   <div class="grid-container">
     <div class="padding-y-5">
       <div class="grid-row grid-gap">
