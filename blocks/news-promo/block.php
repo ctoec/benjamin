@@ -32,7 +32,7 @@
                 </a>
             </div>
             <div class="tablet:grid-col-6 padding-6">
-                <form class="usa-form">
+                <form action="/news" method="GET" class="usa-form">
                     <div class="margin-bottom-4">
                         <?php echo $promo; ?>
                     </div>
