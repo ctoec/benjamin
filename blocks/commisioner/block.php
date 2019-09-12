@@ -21,8 +21,8 @@
                     </a>
                 </div>
                 <div class="grid-row flex-align-center">
-                    <div class="grid-col-auto bg-white margin-right-2 height-8 width-8 display-flex flex-align-center flex-justify-center">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/frontend/img/phone.svg'; ?>" alt="Contact OEC" class="height-4"/>
+                    <div class="grid-col-auto margin-right-2 height-6 width-6 display-flex flex-align-center flex-justify-center">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/frontend/img/phone.svg'; ?>" alt="Contact OEC" class="height-full width-full"/>
                     </div>
                     <div class="grid-col-fill">
                         <div class="text-white font-sans-md"><?php echo $contact_heading ?></div>
