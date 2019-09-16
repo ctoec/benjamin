@@ -30,11 +30,16 @@ i.e.
     transform: translate(-50%,0);
     width: 100vw;
 
+    &--hero--image {
+        background-position: top right;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+    }
+
     &--hero {
         background-position: top right;
         background-size: auto 100%;
         background-repeat: no-repeat;
-        background-color: #61366E;
     }
 
     .text-white {
