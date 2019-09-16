@@ -13,30 +13,33 @@
     <div class="grid-container">
         <h2 class="text-white text-center font-sans-xl text-normal margin-top-0 line-height-sans-2"><?php echo $title ?></h2>
         <div class="grid-row">
-            <div class="tablet:grid-col-8">
+            <div class="tablet:grid-col-7">
                 <div class="text-white margin-bottom-5"><?php echo $content ?></div>
                 <div class="margin-bottom-5">
-                    <a href="<?php echo $cta_link ?>" class="padding-y-2 padding-x-3 bg-primary-darker display-inline-block text-no-underline">
-                        <span class="text-white"><?php echo $cta_title ?></span>
+                    <a href="<?php echo $cta_link ?>" class="usa-button usa-button--big bg-primary-darker">
+                        <span class="display-flex flex-align-center">
+                            <span class="text-white text-left"><?php echo $cta_title ?></span>
+                            <span><img src="<?php echo get_template_directory_uri() . '/assets/frontend/img/arrow-right-white.svg'; ?>" alt="Go to <?php echo $cta_title ?>" aria-role="presentation" height="16" class="margin-left-3" /></span>
+                        </span>
                     </a>
                 </div>
-                <div class="grid-row flex-align-center">
+                <div class="grid-row">
                     <div class="grid-col-auto margin-right-2 height-6 width-6 display-flex flex-align-center flex-justify-center">
                         <img src="<?php echo get_template_directory_uri() . '/assets/frontend/img/phone.svg'; ?>" alt="Contact OEC" class="height-full width-full"/>
                     </div>
                     <div class="grid-col-fill">
-                        <div class="text-white font-sans-md"><?php echo $contact_heading ?></div>
-                        <div class="text-white"><?php echo $contact_content ?></div>
+                        <div class="text-white text-bold font-sans-md"><?php echo $contact_heading ?></div>
+                        <div class="text-white font-sans-sm"><?php echo $contact_content ?></div>
                     </div>
                 </div>
             </div>
-            <div class="tablet:grid-col-4 padding-x-5 margin-top-5 tablet:margin-top-0">
+            <div class="tablet:grid-col-5 padding-x-5 margin-top-5 tablet:margin-top-0">
                 <div class="tablet:margin-x-auto text-center">
                     <?php if ($image) { ?>
-                        <img src="<?php echo wp_get_attachment_url( $image ); ?>" alt="<?php echo $name; ?>" class="height-card width-card" />
+                        <img src="<?php echo wp_get_attachment_url( $image ); ?>" alt="<?php echo $name; ?>" height="200" width="200" />
                     <?php } ?>
-                    <div class="text-white font-sans-md"><?php echo $name ?></div>
-                    <div class="text-white">Commissioner</div>
+                    <div class="text-white text-bold font-sans-md"><?php echo $name ?></div>
+                    <div class="text-white font-sans-sm">Commissioner</div>
                 </div>
             </div>
         </div>
