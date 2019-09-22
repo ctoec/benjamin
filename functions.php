@@ -147,4 +147,21 @@ function homepage_sidebar_init() {
 }
 add_action( 'widgets_init', 'homepage_sidebar_init' );
 
+add_action( 'widgets_init', 'calendar_sidebar' );
+
+function calendar_sidebar() {
+  $args = array(
+    'name'          => 'Calendar Sidebar',
+    'id'            => 'calendar-sidebar',
+    'description'   => 'The Calendar Sidebar is shown on the left hand side of the events calendar in this theme',
+    'class'         => '',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '<h2 class="widgettitle">',
+    'after_title'   => '</h2>' 
+  );
+
+  register_sidebar( $args );
+}
+
 ?>
