@@ -28,7 +28,7 @@
         'date_query' => array(
             array(
                 'column' => 'post_date_gmt',
-                'after'  => '180 days ago',
+                'after'  => '365 days ago',
             )
         )
     );

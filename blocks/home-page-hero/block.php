@@ -5,7 +5,7 @@
 ?>
 
 <div class="b b--hero--image" style="background-image: url(<?php echo wp_get_attachment_url( $background ); ?>)">
-    <div class="b--hero padding-y-8" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/frontend/img/hero-bg.svg'; ?>)">
+    <div class="b--hero padding-y-8" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/frontend/img/hero-bg.svg'; ?>), linear-gradient(90deg, rgba(97,54,111,1) 0%, rgba(97,54,111,1) 57%, rgba(0,212,255,0) 57%, rgba(0,212,255,0) 100%);">
         <div class="grid-container">
             <div class="grid-row">
                 <?php if ($logo) { ?>
