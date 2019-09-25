@@ -15,28 +15,30 @@
     <div class="grid-container">
         <h2 class="text-violet-70v text-center font-sans-xl text-normal margin-top-0 line-height-sans-2"><?php echo $title ?></h2>
         <div class="grid-row margin-top-8">
-            <div class="tablet:grid-col-6 padding-6 bg-white border-top border-left border-right border-base-lighter overflow-hidden">
-                <?php
-                    if ( $query->have_posts() ) {
-                        while ( $query->have_posts() ) {
-                            $query->the_post();
-                            get_template_part('template-parts/feed/news', get_post_format());
+            <div class="desktop:grid-col-6 desktop:padding-right-6">
+                <div class="bg-white border border-base-lighter overflow-hidden padding-6">
+                    <?php
+                        if ( $query->have_posts() ) {
+                            while ( $query->have_posts() ) {
+                                $query->the_post();
+                                get_template_part('template-parts/feed/news', get_post_format());
+                            }
+                            wp_reset_postdata();
                         }
-                        wp_reset_postdata();
-                    }
-                ?>
-                <a href="/news" class="text-no-underline">
-                    <span class="grid-row flex-align-center">
-                        <span class="grid-col-fill"><span class="text-underline hover:text-no-underline">View all News &amp; Updates</span><span class="text-no-underline"> →</span></span>
-                    </span>
-                </a>
+                    ?>
+                    <a href="/news" class="text-no-underline">
+                        <span class="grid-row flex-align-center">
+                            <span class="grid-col-fill"><span class="text-underline hover:text-no-underline">View all News &amp; Updates</span><span class="text-no-underline"> →</span></span>
+                        </span>
+                    </a>
+                </div>
             </div>
-            <div class="tablet:grid-col-6 padding-6">
-                <form action="/news" method="GET" class="usa-form">
+            <div class="desktop:grid-col-6 padding-x-6 padding-y-8">
+                <form action="/news" method="GET" class="usa-form" style="max-width: 35rem">
                     <div class="margin-bottom-4">
                         <?php echo $promo; ?>
                     </div>
-                    <div class="grid-row">
+                    <div class="grid-row maxw-mobile-lg">
                         <div class="grid-col-12 tablet:grid-col-8 tablet:padding-right-2">
                             <input name="email" id="email" type="email" value="" class="usa-input margin-0" tabindex="1" placeholder="email@address.com">
                         </div>
