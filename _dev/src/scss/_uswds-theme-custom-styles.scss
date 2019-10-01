@@ -32,6 +32,12 @@ i.e.
 
     &--hero--image {
         background-position: top right;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &--wave {
+        background-position: top right;
         background-size: auto 100%;
         background-repeat: no-repeat;
     }
