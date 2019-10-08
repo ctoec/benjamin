@@ -4,7 +4,7 @@ class Benjamin_Nav_Menu_Widget extends WP_Nav_Menu_Widget {
 
     private function menuStyleArgs($style = 'side_nav'){
         if($style == 'side_nav'):
-            $class = 'usa-sidenav sticky';
+            $class = 'usa-sidenav sticky bg-base-lightest padding-3';
             $walker = new BenjaminSideNavWalker();
         elseif($style == 'nav_list'):
             $class = 'usa-unstyled-list';
@@ -42,15 +42,6 @@ class Benjamin_Nav_Menu_Widget extends WP_Nav_Menu_Widget {
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
-		/** Adding a class if this is a side_nav */
-		if ($instance['menu_style'] === 'side_nav') {
-			$before_widget 	= '<div class="usa-accordion margin-bottom-3">';
-			$before_widget .= '<h2 class="usa-accordion__heading desktop:display-none">';
-			$before_widget .= '<button class="usa-accordion__button" aria-expanded="true" aria-controls="subnav">On this page...</button>';
-			$before_widget .= '</h2>';
-			$before_widget .= '<div id="subnav" class="usa-accordion__content padding-3 padding-bottom-4 bg-base-lightest">';
-		}
-
 		echo $before_widget; //WPCS: xss ok.
 
 		if ( !empty($instance['title']) )
@@ -63,7 +54,7 @@ class Benjamin_Nav_Menu_Widget extends WP_Nav_Menu_Widget {
             'container' => '',
             'menu_class'    => $class,
             'walker' 		=> $walker,
-						'menu'      	=> $nav_menu
+			'menu'      	=> $nav_menu
 		);
 
 		/**
@@ -85,11 +76,6 @@ class Benjamin_Nav_Menu_Widget extends WP_Nav_Menu_Widget {
 		wp_nav_menu( apply_filters( 'widget_nav_menu_args', $nav_menu_args, $nav_menu, $args, $instance ) );
 
 		$after_widget = $args['after_widget'];
-
-		/** Adding a class if this is a side_nav */
-		if ($instance['menu_style'] === 'side_nav') {
-			$after_widget 	= '</div></div>';
-		}
 
 		echo $after_widget;
 	}
