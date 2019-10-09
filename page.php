@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Template Page 1
+Template Name: Basic: Page
 
 This is a copy of the standard "page" template, but exists to allow some
 deviations to standard pages
