@@ -135,11 +135,11 @@ a[href*="youtube.com"] {
 Gravity Forms
 ----------------------------------------
 */
-.gfield_label {
+.gform_body .ginput_container .gfield_label {
     @extend .usa-label;
 }
 
-.ginput_container_text {
+.gform_body .ginput_container .ginput_container_text {
     input {
         @extend .usa-input;
     }
@@ -153,13 +153,14 @@ Gravity Forms
     @extend .usa-button;
 }
 
-.ginput_container_checkbox {
+.gform_body .ginput_container .ginput_container_checkbox {
     margin-top: 0.5rem;
 }
 
-.gfield_checkbox {
+.gform_body .ginput_container .gfield_checkbox {
     label {
         @extend .usa-checkbox__label;
+        font-size: 1rem;
     }
     input {
         @extend .usa-checkbox__input;
