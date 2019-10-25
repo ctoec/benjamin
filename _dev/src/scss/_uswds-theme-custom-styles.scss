@@ -223,7 +223,63 @@ Primary Nav Customizations
 ----------------------------------------
 */
 
+.usa-header--extended {
+    .usa-nav {
+        border-top: none !important;
+    }
+}
+
+@media (max-width: 64em) {
+    .usa-navbar {
+        .usa-logo {
+            svg {
+                height: 35px !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 64em) {
+    .usa-nav__secondary {
+        display: flex;
+        margin-top: 0 !important;
+        align-items: center;
+        bottom: 5rem !important;
+
+        .usa-search {
+            margin-top: 0 !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .usa-nav__link {
+            @include u-font('sans', 'sm');
+        }
+    }
+}
+
+.usa-nav {
+    .usa-nav__primary>.usa-nav__primary-item>a {
+        @include u-color('base-darkest');
+    }
+
+    .usa-nav__secondary {
+        .usa-nav__link {
+            @include u-color('base-dark');
+            @include u-font('sans', 'xs');
+        }
+
+        .usa-nav__primary>.usa-nav__primary-item>a {
+            @include u-color('base-dark');
+        }
+    }
+}
+
 .usa-nav__primary {
+  li {
+      list-style: none;
+  }
+
   .usa-nav__link {
     @extend .border-transparent;
     @extend .border-x;
@@ -231,11 +287,13 @@ Primary Nav Customizations
     position: relative;
     z-index: 100;
     white-space: nowrap;
+    @include u-color('base-darkest');
+    @include u-font('sans', 'md');
   }
 
   button.usa-nav__link[aria-expanded=true] {
     @extend .border-base-lighter;
-    @include u-color('base-dark');
+    @include u-color('base-darkest');
     @include u-bg('white');
     background-image: url(../img/angle-arrow-up-primary.svg);
   }
