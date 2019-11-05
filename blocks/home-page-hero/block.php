@@ -7,13 +7,13 @@
 <div class="b b--hero--image" style="background: linear-gradient(90deg, rgba(97,54,111,1) 0%, rgba(97,54,111,1) 57%, rgba(0,212,255,0) 57%, rgba(0,212,255,0) 100%);">
     <div class="b--hero" style="background-image: url(<?php echo wp_get_attachment_url( $background ); ?>);">
         <div class="b--wave padding-y-8" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/frontend/img/hero-bg.svg'; ?>)">
-            <div class="grid-container">
+            <div class="grid-container padding-y-3">
                 <div class="grid-row">
                     <?php if ($logo) { ?>
                         <img src="<?php echo wp_get_attachment_url( $logo ); ?>" alt="<?php echo $heading; ?>" class="height-6 desktop:display-none" />
                     <?php } ?>
                 </div>
-                <h1 class="font-sans-3xl text-white line-height-sans-3 text-normal  desktop:margin-top-0 margin-bottom-0 maxw-tablet">
+                <h1 class="font-sans-3xl text-white line-height-sans-2 text-normal desktop:margin-top-0 margin-bottom-0" style="max-width: 50rem">
                     <?php echo $heading; ?>
                 </h1>
             </div>

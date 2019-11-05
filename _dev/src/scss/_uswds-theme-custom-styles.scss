@@ -74,6 +74,17 @@ i.e.
     }
 }
 
+@media (max-width: 64em) {
+    .b--hero--image {
+        background: rgba(97,54,111,1) !important;
+    }
+
+    .b--hero,
+    .b--wave {
+        background-image: none !important;
+    }
+}
+
 .usa-prose,
 .breadcrumbs {
   a:link,
@@ -272,6 +283,17 @@ Primary Nav Customizations
         .usa-nav__primary>.usa-nav__primary-item>a {
             @include u-color('base-dark');
         }
+    }
+}
+
+@media (min-width: 64em) {
+    .usa-nav__primary {
+        justify-content: flex-end;
+        margin-top: -20px;
+    }
+
+    .usa-nav__secondary {
+        bottom: 3rem !important;
     }
 }
 
