@@ -509,3 +509,26 @@ body {
     margin-right: 5px;
   }
 }
+
+@media print {
+    * {
+        background: #ffffff !important;
+        border-color: #000000 !important;
+        color: #000000 !important;
+    }
+
+    #logo g {
+        fill: #000000;
+    }
+
+    .usa-menu-btn,
+    .usa-accordion__heading,
+    .footer-list,
+    .notranslate,
+    .usa-sidenav,
+    #scrolltotop,
+    header.usa-dark-background,
+    .usa-nav {
+        display: none;
+    }
+}
