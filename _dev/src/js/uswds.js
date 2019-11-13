@@ -1,6 +1,7 @@
 require('uswds');
 require('./scroll-to-top');
 require('./translate');
+require('./link-icons');
 
 window.addEventListener('load', toggleSidebar);
 window.addEventListener('resize', toggleSidebar);
