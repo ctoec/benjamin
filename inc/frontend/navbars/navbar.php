@@ -48,6 +48,11 @@ $sticky = get_theme_mod('navbar_sticky_setting', 'no') == 'yes' ? 'sticky' : '';
                             </a>
                         </li>
                         <li class="usa-nav__submenu-item">
+                            <a href="#" class="" data-google-lang="zh">
+                            <span>简体字</span>
+                            </a>
+                        </li>
+                        <li class="usa-nav__submenu-item">
                             <a href="#" class="" data-google-lang="vi">
                             <span>Tiếng Việt</span>
                             </a>
@@ -55,6 +60,11 @@ $sticky = get_theme_mod('navbar_sticky_setting', 'no') == 'yes' ? 'sticky' : '';
                         <li class="usa-nav__submenu-item">
                             <a href="#" class="" data-google-lang="pt">
                             <span>Portugese</span>
+                            </a>
+                        </li>
+                        <li class="usa-nav__submenu-item">
+                            <a href="#" class="" data-google-lang="ar">
+                            <span>ٱلْعَرَبِيَّة</span>
                             </a>
                         </li>
                         <li class="usa-nav__submenu-item">

@@ -43,7 +43,7 @@
                             <input name="email" id="email" type="email" value="" class="usa-input margin-0" tabindex="1" placeholder="email@address.com">
                         </div>
                         <div class="grid-col-12 margin-top-2 tablet:margin-top-0 tablet:grid-col-4">
-                            <button class="usa-button margin-0" style="margin-top: 0 !important">Subscribe</button>
+                            <button class="usa-button margin-0 bg-primary-darker" style="margin-top: 0 !important">Subscribe</button>
                         </div>
                     </div>
                 </form>

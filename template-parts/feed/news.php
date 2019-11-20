@@ -26,13 +26,13 @@
     <?php } ?>
     <div class="flex-fill">
         <header>
-            <h3 class="font-sans-md text-normal line-height-sans-4 margin-top-0 margin-bottom-1">
+            <h3 class="font-sans-md text-normal line-height-sans-4 margin-top-0 margin-bottom-0">
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h3>
         </header><!-- .entry-header -->
         <div>
-            <div class="font-sans-md text-bold"><?php echo implode(", ", $categories); ?></div>
-            <div class="font-sans-md"><?php the_date('m/d/Y'); ?></div>
+            <div class="font-sans-md"><?php echo implode(", ", $categories); ?></div>
+            <div class="font-sans-sm text-base-light"><?php the_date('m/d/Y'); ?></div>
         </div>
     </div>
 </article><!-- #post-## -->

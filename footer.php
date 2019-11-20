@@ -30,6 +30,11 @@
                 </a>
               </li>
               <li>
+                <a href="#" class="" data-google-lang="zh">
+                    <span>简体字</span>
+                </a>
+              </li>
+              <li>
                 <a href="#" class="" data-google-lang="vi">
                   <span>Tiếng Việt</span>
                 </a>
@@ -38,6 +43,11 @@
                 <a href="#" class="" data-google-lang="pt">
                   <span>Portugese</span>
                 </a>
+              </li>
+              <li>
+              <a href="#" class="" data-google-lang="ar">
+                            <span>ٱلْعَرَبِيَّة</span>
+                            </a>
               </li>
               <li>
                 <a href="#" class="" data-google-lang="ht">

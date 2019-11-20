@@ -11,7 +11,7 @@
 <div class="b padding-y-8<?php if($theme == 'grey') { ?> bg-gray-5<?php } ?>">
     <div class="grid-container">
         <div class="grid-row usa-prose flex-align-center">
-            <div class="grid-col-fill order-<?php if ($isLeft) { ?>last desktop:margin-left-7<?php } else { ?>first desktop:margin-right-7<?php } ?>">
+            <div class="grid-col-fill maxw-tablet order-<?php if ($isLeft) { ?>last desktop:margin-left-7<?php } else { ?>first desktop:margin-right-7<?php } ?>">
                 <h2 class="text-violet-70v font-sans-xl text-normal margin-top-0 line-height-sans-2"><?php echo $title ?></h2>
                 <div class="margin-bottom-3"><?php echo $content ?></div>
                 <?php if ($linksHeading) { ?>

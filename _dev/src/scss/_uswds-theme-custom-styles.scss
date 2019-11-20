@@ -300,6 +300,16 @@ Primary Nav Customizations
         @include u-color('base-darkest');
     }
 
+    .usa-nav__primary {
+        .usa-nav__submenu {
+            z-index: 1000;
+        }
+
+        button.usa-nav__link[aria-expanded=true] {
+            z-index: 1001;
+        }
+    }
+
     .usa-nav__secondary {
         .usa-nav__link {
             @include u-color('base-dark');
