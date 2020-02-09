@@ -18,16 +18,14 @@ window.TranslateInit = function() {
 
     let links = document.querySelectorAll("a[data-google-lang]");
 
-    for (var i = 0; i < links.length; i++) {
-        var link = links[i];
-        
-        link.addEventListener('click', function (e) {
+    links.forEach(function(link, index) {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
             TranslateCookieHandler("/" + googleTranslateConfig.lang + "/" + link.getAttribute("data-google-lang"), googleTranslateConfig.domain);
             window.location.reload();
         });
-    }
+    });
 }
 
 function TranslateGetCode() {
