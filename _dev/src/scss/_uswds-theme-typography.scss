@@ -122,12 +122,8 @@ names to something more descriptive.
 */
 
 $theme-typeface-tokens: (
-  example-serif-token: (
-    display-name: 'Example Serif Display Name',
-    cap-height: 364px,
-  ),
-  example-sans-token: (
-    display-name: 'Example Sans Display Name',
+  lato: (
+    display-name: 'Lato',
     cap-height: 364px,
   ),
 );
@@ -167,7 +163,7 @@ $theme-font-type-lang:  false;
 $theme-font-type-mono:  'roboto-mono';
 
 // sans-serif
-$theme-font-type-sans:  'public-sans';
+$theme-font-type-sans:  'lato';
 
 // serif
 $theme-font-type-serif: 'merriweather';

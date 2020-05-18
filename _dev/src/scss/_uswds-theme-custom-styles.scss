@@ -24,28 +24,46 @@ i.e.
     font-size: 1.125rem;
 }
 
+.font-sans-5xl {
+  font-size: 3rem;
+}
+
+@media (min-width: 64em) {
+  .font-sans-5xl {
+    font-size: 4.375rem;
+  }
+}
+
 .b {
     left: 50%;
     position: relative;
     transform: translate(-50%,0);
     width: 100vw;
 
-    &--hero--image {
-        background-position: top right;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
     &--wave {
-        background-position: top right;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
+      background-position: top right;
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+
+      @media (min-width: 64em) {
+        width: 75%;
+        min-height: 400px;
+      }
     }
 
     &--hero {
-        background-position: top right;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
+      background-position: top right;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 250px;
+
+      @media (min-width: 64em) {
+        min-height: 400px;
+      }
     }
 
     .text-white {
@@ -71,17 +89,6 @@ i.e.
     &--commissioner {
         background-color: #2378C3;
         background-image: radial-gradient(53% 103%, #75B1E6 0%, #2378C3 100%);
-    }
-}
-
-@media (max-width: 64em) {
-    .b--hero--image {
-        background: rgba(97,54,111,1) !important;
-    }
-
-    .b--hero,
-    .b--wave {
-        background-image: none !important;
     }
 }
 
@@ -260,12 +267,6 @@ Primary Nav Customizations
 ----------------------------------------
 */
 
-.usa-header--extended {
-    .usa-nav {
-        border-top: none !important;
-    }
-}
-
 @media (max-width: 64em) {
     .usa-navbar {
         .usa-logo {
@@ -277,22 +278,30 @@ Primary Nav Customizations
 }
 
 @media (min-width: 64em) {
-    .usa-nav__secondary {
-        display: flex;
-        margin-top: 0 !important;
-        align-items: center;
-        bottom: 5rem !important;
+  .usa-header--extended .usa-navbar,
+  .usa-header--extended .usa-nav__inner {
+    max-width: none !important;
+  }
 
-        .usa-search {
-            margin-top: 0 !important;
-            display: flex;
-            align-items: center;
-        }
+  .usa-header--extended .usa-nav__primary {
+    margin-left: -0.5rem !important;
+  }
 
-        .usa-nav__link {
-            @include u-font('sans', 'sm');
-        }
-    }
+  .usa-nav__secondary {
+      display: flex;
+      margin-top: 0 !important;
+      align-items: center;
+
+      .usa-search {
+          margin-top: 0 !important;
+          display: flex;
+          align-items: center;
+      }
+
+      .usa-nav__link {
+          @include u-font('sans', 'sm');
+      }
+  }
 }
 
 .usa-nav {
@@ -322,18 +331,7 @@ Primary Nav Customizations
     }
 }
 
-@media (min-width: 64em) {
-    .usa-nav__primary {
-        justify-content: flex-end;
-        margin-top: -20px;
-    }
-
-    .usa-nav__secondary {
-        bottom: 3rem !important;
-    }
-}
-
-.usa-nav__primary {
+.usa-nav__secondary {
   li {
       list-style: none;
   }
