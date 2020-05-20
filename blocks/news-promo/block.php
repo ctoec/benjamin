@@ -13,7 +13,7 @@
 
 <div class="b bg-gray-5 padding-top-8 usa-prose">
     <div class="grid-container">
-        <h2 class="text-violet-70v text-center font-sans-xl text-normal margin-top-0 line-height-sans-2"><?php echo $title ?></h2>
+        <h2 class="text-ct-blue text-center font-sans-xl text-normal margin-top-0 line-height-sans-2"><?php echo $title ?></h2>
         <div class="grid-row margin-top-8">
             <div class="desktop:grid-col-6 desktop:padding-right-6">
                 <div class="bg-white border border-base-lighter overflow-hidden padding-6">

@@ -48,7 +48,7 @@ if (!$hide_content) :
             endif;
             ?>
             <div class="<?php echo esc_attr($main_width); ?>">
-                <h1 class="text-violet-70v font-sans-xl text-normal margin-top-0">News &amp; Updates</h1>
+                <h1 class="text-ct-blue font-sans-xl text-normal margin-top-0">News &amp; Updates</h1>
                 <div class="usa-prose">
                     <?php
                         

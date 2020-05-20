@@ -12,7 +12,7 @@
     <div class="grid-container">
         <div class="grid-row usa-prose flex-align-center">
             <div class="grid-col-fill maxw-tablet order-<?php if ($isLeft) { ?>last desktop:margin-left-7<?php } else { ?>first desktop:margin-right-7<?php } ?>">
-                <h2 class="text-violet-70v font-sans-xl text-normal margin-top-0 line-height-sans-2"><?php echo $title ?></h2>
+                <h2 class="text-ct-blue font-sans-xl text-normal margin-top-0 line-height-sans-2"><?php echo $title ?></h2>
                 <div class="margin-bottom-3"><?php echo $content ?></div>
                 <?php if ($linksHeading) { ?>
                     <div class="text-bold line-height-sans-6"><?php echo $linksHeading ?></div>

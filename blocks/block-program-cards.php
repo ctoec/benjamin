@@ -4,7 +4,7 @@
 
 <div class="b padding-y-8">
     <div class="grid-container">
-        <h2 class="text-violet-70v text-center font-sans-xl text-normal margin-top-0 line-height-sans-2"><?php echo $title ?></h2>
+        <h2 class="text-ct-blue text-center font-sans-xl text-normal margin-top-0 line-height-sans-2"><?php echo $title ?></h2>
         <div class="display-flex flex-wrap flex-align-center">
             <div class="display-flex flex-wrap margin-x-auto grid-col-fill maxw-tablet-lg">
                 <?php 

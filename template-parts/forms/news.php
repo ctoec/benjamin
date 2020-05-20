@@ -5,7 +5,7 @@
 $terms = get_terms('news-category');
 ?>
 
-<h1 class="text-violet-70v font-sans-xl text-normal margin-top-10">Sign Up for News &amp; Updates</h1>
+<h1 class="text-ct-blue font-sans-xl text-normal margin-top-10">Sign Up for News &amp; Updates</h1>
 <div class="font-sans-md text-normal line-height-sans-4 margin-top-0 margin-bottom-5">Want to receive email updates from OEC? Choose the topics you're interested in and we'll send you updates.</div>
 <form>
     <?php 

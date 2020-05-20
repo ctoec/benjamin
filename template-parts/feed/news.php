@@ -21,7 +21,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'usa-prose margin-bottom-3 padding-bottom-3 border-bottom border-base-lighter grid-row' ); ?>>
     <?php if (strtotime($date) > strtotime('-30 days')) { ?>
         <div class="flex-auto padding-right-105">
-            <div class="font-sans-3xs padding-x-1 padding-y-05 text-white text-uppercase bg-violet-70v">New</div>
+            <div class="font-sans-3xs padding-x-1 padding-y-05 text-white text-uppercase bg-ct-blue">New</div>
         </div>
     <?php } ?>
     <div class="flex-fill">

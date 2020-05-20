@@ -24,8 +24,24 @@ i.e.
     font-size: 1.125rem;
 }
 
+.usa-button--white:hover {
+  background-color: #efefef;
+}
+
 .font-sans-5xl {
   font-size: 3rem;
+}
+
+.bg-ct-blue {
+  background-color: #09538B;
+}
+
+.bg-footer {
+  background-color: #053756;
+}
+
+.text-ct-blue {
+  color: #09538B;
 }
 
 @media (min-width: 64em) {
@@ -44,6 +60,7 @@ i.e.
       background-position: top right;
       background-size: cover;
       background-repeat: no-repeat;
+      width: 75%;
       min-height: 250px;
       display: flex;
       align-items: center;
@@ -51,6 +68,11 @@ i.e.
       @media (min-width: 64em) {
         width: 75%;
         min-height: 400px;
+      }
+
+      @media (min-width: 80em) {
+        width: 70%;
+        min-height: 600px;
       }
     }
 
@@ -87,8 +109,7 @@ i.e.
     }
 
     &--commissioner {
-        background-color: #2378C3;
-        background-image: radial-gradient(53% 103%, #75B1E6 0%, #2378C3 100%);
+        background-color: #09538B;
     }
 }
 
@@ -119,10 +140,6 @@ i.e.
   @include u-bg('gold-10v');
   @include u-padding('2');
   @include u-margin-top('2');
-}
-
-.text-violet-70v {
-  @include u-color('violet-70v');
 }
 
 .bg-violet-70v {

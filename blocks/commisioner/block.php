@@ -16,10 +16,10 @@
             <div class="tablet:grid-col-7">
                 <div class="text-white margin-bottom-5"><?php echo $content ?></div>
                 <div class="margin-bottom-5">
-                    <a href="<?php echo $cta_link ?>" class="usa-button usa-button--big bg-primary-darker">
+                    <a href="<?php echo $cta_link ?>" class="usa-button usa-button--big usa-button--white bg-white">
                         <span class="display-flex flex-align-center">
-                            <span class="text-white text-left"><?php echo $cta_title ?></span>
-                            <span><img src="<?php echo get_template_directory_uri() . '/assets/frontend/img/arrow-right-white.svg'; ?>" alt="Go to <?php echo $cta_title ?>" aria-role="presentation" height="16" class="margin-left-3" /></span>
+                            <span class="text-ct-blue text-left"><?php echo $cta_title ?></span>
+                            <span><img src="<?php echo get_template_directory_uri() . '/assets/frontend/img/arrow-right-blue.svg'; ?>" alt="Go to <?php echo $cta_title ?>" aria-role="presentation" height="16" class="margin-left-3" /></span>
                         </span>
                     </a>
                 </div>

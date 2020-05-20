@@ -12,50 +12,21 @@
 ?>
 
 </main><!-- #usa-prose -->
-<footer class="bg-primary-dark" role="contentinfo">
+<footer class="bg-footer" role="contentinfo">
   <div class="grid-container">
     <div class="padding-y-5">
       <div class="grid-row grid-gap">
-        <div class="tablet:grid-col-7 desktop:grid-col-8">
-          <div class="footer-list margin-bottom-5 display-none desktop:display-flex">
-            <ul class="notranslate flex-center">
-              <li>
-                <a href="#"data-google-lang="en">
-                  <span>English</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="" data-google-lang="es">
-                  <span>Español</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="" data-google-lang="zh">
-                    <span>简体字</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="" data-google-lang="vi">
-                  <span>Tiếng Việt</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="" data-google-lang="pt">
-                  <span>Portugese</span>
-                </a>
-              </li>
-              <li>
-              <a href="#" class="" data-google-lang="ar">
-                            <span>ٱلْعَرَبِيَّة</span>
-                            </a>
-              </li>
-              <li>
-                <a href="#" class="" data-google-lang="ht">
-                  <span>Kreyòl Ayisyen</span>
-                </a>
-              </li>
-            </ul>
+        <div class="tablet:grid-col-7 margin-top-5 tablet:margin-top-0">
+          <div class="grid-row grid-gap">
+            <div class="margin-right-6">
+              <a href="https://www.ct.gov"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/ct.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-6" />'); ?></a>
+            </div>
+            <div class="margin-top-6 tablet:margin-top-0">
+              <a href="/"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/logo-white.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-6" />'); ?></a>
+            </div>
           </div>
+        </div>
+        <div class="tablet:grid-col-5 margin-top-6 tablet:margin-top-0">
           <div class="grid-row grid-gap">
             <div class="tablet:grid-col-6 desktop:grid-col-4 footer-list">
               <?php dynamic_sidebar( 'footer-left' ); ?>
@@ -65,25 +36,50 @@
             </div>
           </div>
         </div>
-        <div class="tablet:grid-col-5 desktop:grid-col-4 margin-top-5 tablet:margin-top-0">
-          <div class="margin-bottom-3">
-            <?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/logo-white.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-6" />'); ?>
-          </div>
-          <div class="margin-bottom-3 text-white font-sans-2xs line-height-sans-4">
-            <address>
-              Connecticut Office of Early Childhood
-              <br />
-              450 Columbus Blvd
-              <br />
-              Hartford, CT 06103
-            </address>
-          </div>
-          <div class="display-flex">
-            <a href="https://www.facebook.com/ctoec" class="margin-right-3"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/social-icons/facebook.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-4" />'); ?></a>
-            <a href="https://twitter.com/ct_oec" class="margin-right-3"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/social-icons/twitter.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-4" />'); ?></a>
-            <a href="https://www.instagram.com/ctoecgov/" class="margin-right-3"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/social-icons/instagram.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-4" />'); ?></a>
-          </div>
-        </div>
+      </div>
+      <div class="display-flex margin-top-5 desktop:flex-justify-center">
+        <a href="https://www.facebook.com/ctoec" class="margin-right-3"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/social-icons/facebook.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-4" />'); ?></a>
+        <a href="https://twitter.com/ct_oec" class="margin-right-3"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/social-icons/twitter.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-4" />'); ?></a>
+        <a href="https://www.instagram.com/ctoecgov/" class="margin-right-3"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/social-icons/instagram.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-4" />'); ?></a>
+      </div>
+      <div class="footer-list margin-top-3 display-none desktop:display-flex desktop:flex-justify-center">
+        <ul class="notranslate flex-center">
+          <li>
+            <a href="#"data-google-lang="en">
+              <span>English</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="" data-google-lang="es">
+              <span>Español</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="" data-google-lang="zh">
+                <span>简体字</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="" data-google-lang="vi">
+              <span>Tiếng Việt</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="" data-google-lang="pt">
+              <span>Portugese</span>
+            </a>
+          </li>
+          <li>
+          <a href="#" class="" data-google-lang="ar">
+                        <span>ٱلْعَرَبِيَّة</span>
+                        </a>
+          </li>
+          <li>
+            <a href="#" class="" data-google-lang="ht">
+              <span>Kreyòl Ayisyen</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
