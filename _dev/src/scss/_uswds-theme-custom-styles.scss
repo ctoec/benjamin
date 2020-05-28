@@ -328,22 +328,23 @@ Primary Nav Customizations
 
     .usa-nav__primary {
         .usa-nav__submenu {
-            z-index: 1000;
+          z-index: 1000;
+          list-style: none;
         }
 
         button.usa-nav__link[aria-expanded=true] {
-            z-index: 1001;
+          z-index: 1001;
         }
     }
 
     .usa-nav__secondary {
         .usa-nav__link {
-            @include u-color('base-dark');
-            @include u-font('sans', 'xs');
+          @include u-color('base-dark');
+          @include u-font('sans', 'xs');
         }
 
         .usa-nav__primary>.usa-nav__primary-item>a {
-            @include u-color('base-dark');
+          @include u-color('base-dark');
         }
     }
 }
@@ -520,6 +521,10 @@ Scroll to top
   @include u-text('uppercase');
   @include u-right(2);
   @include u-bottom(3);
+
+  &[hidden] {
+    display: none;
+  }
 }
 
 /*
