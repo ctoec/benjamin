@@ -37,7 +37,7 @@
                                                     <img src="<?php echo wp_get_attachment_url( $link_icon ); ?>" alt="<?php echo $link_text; ?>" style="width: 100%; max-height: 25px" />
                                                 </span>
                                                 <span class="grid-col-fill padding-top-05">
-                                                    <span class="text-underline hover:text-no-underline"><?php echo($link_text) ?></span><span class="text-no-underline"> →</span>
+                                                    <span class="text-underline hover:text-no-underline"><?php echo($link_text) ?></span><span class="text-no-underline">&nbsp;→</span>
                                                 </span>
                                             </span>
                                         </a>
