@@ -32,6 +32,7 @@ window.TranslateInit = function() {
 
 function TranslateGetCode() {
     let lang = (Cookies.get('googtrans') != undefined && Cookies.get('googtrans') != "null") ? Cookies.get('googtrans') : googleTranslateConfig.lang;
+    console.log(lang);
     return lang.match(/(?!^\/)[^\/]*$/gm)[0];
 }
 

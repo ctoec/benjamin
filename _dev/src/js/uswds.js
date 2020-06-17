@@ -1,10 +1,12 @@
 require('uswds');
 require('./scroll-to-top');
 require('./translate');
+require('./navigation');
 require('./link-icons');
 
 window.addEventListener('load', toggleSidebar);
 window.addEventListener('resize', toggleSidebar);
+window.addEventListener('load', NavigationInit);
 
 function toggleSidebar() {
     var button = document.querySelector('.sidebar .usa-accordion__button');

@@ -40,11 +40,15 @@ class BenjaminSideNavWalker extends Walker_Nav_Menu {
         $link_class = ($depth == 0) ? 'usa-nav-link' : '';
 
 
-        if( $permalink && $permalink != '#' ) {
+        if ($args->walker->has_children) {
+            $output .= '<button class="' . esc_attr($classes) . '">';
+                $output .= '<span>' . $title . '</span>';
+            $output .= '</button>';
+        } else if( $permalink && $permalink != '#' ) {
             $output .= '<a class="' . esc_attr($classes) . '" href="' . esc_url($permalink) . '">';
                 $output .= '<span>' . $title . '</span>';
             $output .= '</a>';
-        }else{
+        } else {
             $output .= '<span class="' . esc_attr($classes) . '">';
                 $output .= '<span>' . $title . '</span>';
             $output .= '</span>';

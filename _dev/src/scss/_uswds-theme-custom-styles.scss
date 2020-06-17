@@ -20,6 +20,11 @@ i.e.
 ----------------------------------------
 */
 
+.wp-block-image {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .usa-prose {
     font-size: 1.125rem;
 }
@@ -42,6 +47,81 @@ i.e.
 
 .text-ct-blue {
   color: #09538B;
+}
+
+.usa-sidenav {
+  padding-left: 1.75rem;
+}
+
+.usa-accordion {
+  .widget-title {
+    margin: 0;
+    background-image: url(../img/plaid.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 40em) {
+  .usa-sidenav .usa-current:after {
+    left: -0.75rem;
+  }
+}
+
+.usa-sidenav__item {
+  button,
+  a {
+    padding-left: 0;
+  }
+  
+  &.has-current {
+    & > button {
+      font-weight: bold;
+    }
+  }
+
+  &.is-active {
+    & > button {
+      background-image: url(../img/angle-arrow-up-primary.svg);
+      font-weight: bold;
+    }
+  }
+
+  .usa-sidenav__sublist {
+    margin-left: 1.5rem;
+
+    .usa-sidenav__item {
+      border-top: none;
+      margin-left: -0.75rem;
+    }
+
+    .usa-current {
+      background: #ffffff;
+    }
+
+    button,
+    a {
+      padding-left: 0.75rem;
+    }
+  }
+
+  button {
+    background-color: none;
+    border: none;
+    appearance: none;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0;
+    color: #565c65;
+    background-image: url(../img/angle-arrow-down.svg);
+    background-position: right center;
+    background-size: 15px;
+    background-repeat: no-repeat;
+  }
 }
 
 @media (min-width: 64em) {
@@ -573,6 +653,8 @@ body {
     margin-right: 5px;
   }
 }
+
+
 
 @media print {
     * {
