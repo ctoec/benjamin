@@ -47,13 +47,13 @@ class BenjaminNavbarWalker extends Walker_Nav_Menu {
         if($depth == 0 && $args->walker->has_children){
             
             $output  .= '<button class="usa-accordion__button usa-nav__link ' . esc_attr( $child_active ) . '"
-            aria-expanded="false" aria-controls="side-nav-' . esc_attr($item->menu_order) . '">';
+            aria-expanded="false" aria-controls="side-nav-' . esc_attr($item->menu_order) . '" tabindex="0">';
                 $output .= '<span>'.$title.'</span>';
             $output .= '</button>';
 
         }elseif( $permalink && $permalink != '#' ) {
             
-            $output .= '<a href="' . esc_url($permalink) . '" class="' . esc_attr($link_class) . '">';
+            $output .= '<a href="' . esc_url($permalink) . '" class="' . esc_attr($link_class) . '" tabindex="0">';
                 $output .= '<span>' . $title . '</span>';
             $output .= '</a>';
 

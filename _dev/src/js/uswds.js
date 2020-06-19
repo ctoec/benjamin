@@ -12,7 +12,7 @@ function toggleSidebar() {
     var button = document.querySelector('.sidebar .usa-accordion__button');
     var sidebar = document.getElementById('sidebar');
 
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 1025) {
         button.setAttribute('aria-expanded', true);
         sidebar.hidden = false;
     } else {

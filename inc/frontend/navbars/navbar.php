@@ -8,11 +8,17 @@ $sticky = get_theme_mod('navbar_sticky_setting', 'no') == 'yes' ? 'sticky' : '';
         <div class="usa-logo" id="extended-mega-logo">
             <?php benjamin_navbar_brand(); ?>
         </div>
-        <button class="usa-menu-btn">Menu</button>
+        <button class="usa-menu-btn display-flex flex-align-center">
+            <img src="data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 35 25'%3E%3Cpath fill='%23fff' d='M0 0h35v5H0zM0 10h35v5H0zM0 20h35v5H0z'/%3E%3C/svg%3E" role="presentation" class="height-2 margin-right-1" />
+            <span>Menu</span>
+        </button>
     </div>
-    <nav aria-label="Primary navigation" class="usa-nav">
-        <div class="usa-nav__inner">
-            <button class="usa-nav__close"><img src="../../dist/img/close.svg" alt="close"></button>
+    <nav aria-label="Primary navigation" class="usa-nav padding-0">
+        <button class="usa-menu-btn display-flex flex-align-center width-full">
+            <span role="presentation">Menu</span>
+            <img src="data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 26'%3E%3Cpath fill='%23fff' d='M0 20.047L20.047 0l5.657 5.657L5.657 25.704z'/%3E%3Cpath fill='%23fff' d='M6 .047l20.046 20.046-5.657 5.657L.343 5.704z'/%3E%3C/svg%3E" alt="close menu" class="height-2 margin-left-auto">
+        </button>
+        <div class="usa-nav__inner padding-2">
             <ul class="usa-nav__primary usa-accordion">
                 <?php
                 $args =  array(
@@ -29,7 +35,7 @@ $sticky = get_theme_mod('navbar_sticky_setting', 'no') == 'yes' ? 'sticky' : '';
             <div class="usa-nav__secondary">
                 <ul id="translate-navigation" class="usa-nav__primary usa-accordion notranslate width-auto margin-right-05" style="margin-top: 0;">
                     <li class="usa-nav__primary-item">
-                        <a href="/calendar" class="usa-nav__link">Calendar</a>
+                        <a href="/calendar" class="usa-nav__link" tabindex="0">Calendar</a>
                     </li>
                     <li class="usa-nav__primary-item">
                         <button class="usa-accordion__button usa-nav__link usa-nav__translate" aria-expanded="false" aria-controls="translations">

@@ -25,6 +25,19 @@ i.e.
   margin-right: 0;
 }
 
+.usa-menu-btn {
+  background-color: #61366F;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #61366F;
+  }
+}
+
+.usa-nav.padding-0 {
+  padding: 0 !important;
+}
+
 .usa-prose {
     font-size: 1.125rem;
 }
@@ -57,16 +70,31 @@ i.e.
   .widget-title {
     margin: 0;
     background-image: url(../img/plaid.png);
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
     padding: 0.5rem 1rem;
+    line-height: 1.1;
   }
 }
 
-@media (min-width: 40em) {
-  .usa-sidenav .usa-current:after {
-    left: -0.75rem;
+@media (min-width: 1024px) {
+  .usa-accordion {
+    .widget-title {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+  }
+}
+
+.usa-sidenav .usa-current:after {
+  left: -0.75rem !important;
+}
+
+.usa-nav__primary {
+  button,
+  a.usa-nav__link {
+    padding-left: 0 !important;
   }
 }
 
@@ -108,7 +136,7 @@ i.e.
   }
 
   button {
-    background-color: none;
+    background-color: transparent;
     border: none;
     appearance: none;
     display: block;
@@ -121,6 +149,7 @@ i.e.
     background-position: right center;
     background-size: 15px;
     background-repeat: no-repeat;
+    padding-right: 2rem;
   }
 }
 
