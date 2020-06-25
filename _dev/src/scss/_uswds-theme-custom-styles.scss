@@ -25,12 +25,35 @@ i.e.
   margin-right: 0;
 }
 
+.usa-overlay.is-visible ~ .usa-header {
+  .usa-menu-btn {
+    background-color: #61366F;
+    color: #ffffff;
+  }
+}
+
 .usa-menu-btn {
-  background-color: #61366F;
+  color: #61366F;
+  background-color: transparent;
   cursor: pointer;
+
+  svg {
+    height: 18px;
+    width: 20px;
+    margin-right: 7px;
+  }
+
+  path {
+    fill: #61366F;
+  }
 
   &:hover {
     background-color: #61366F;
+    color: #ffffff;
+
+    path {
+      fill: #ffffff;
+    }
   }
 }
 

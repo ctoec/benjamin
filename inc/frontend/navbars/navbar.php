@@ -9,7 +9,7 @@ $sticky = get_theme_mod('navbar_sticky_setting', 'no') == 'yes' ? 'sticky' : '';
             <?php benjamin_navbar_brand(); ?>
         </div>
         <button class="usa-menu-btn display-flex flex-align-center">
-            <img src="data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 35 25'%3E%3Cpath fill='%23fff' d='M0 0h35v5H0zM0 10h35v5H0zM0 20h35v5H0z'/%3E%3C/svg%3E" role="presentation" class="height-2 margin-right-1" />
+            <svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 35 25'><path fill='#fff' d='M0 0h35v5H0zM0 10h35v5H0zM0 20h35v5H0z'/></svg>
             <span>Menu</span>
         </button>
     </div>
