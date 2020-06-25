@@ -18,7 +18,7 @@ $sticky = get_theme_mod('navbar_sticky_setting', 'no') == 'yes' ? 'sticky' : '';
             <span role="presentation">Menu</span>
             <img src="data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 26'%3E%3Cpath fill='%23fff' d='M0 20.047L20.047 0l5.657 5.657L5.657 25.704z'/%3E%3Cpath fill='%23fff' d='M6 .047l20.046 20.046-5.657 5.657L.343 5.704z'/%3E%3C/svg%3E" alt="close menu" class="height-2 margin-left-auto">
         </button>
-        <div class="usa-nav__inner padding-2">
+        <div class="usa-nav__inner">
             <ul class="usa-nav__primary usa-accordion">
                 <?php
                 $args =  array(

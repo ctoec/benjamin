@@ -114,13 +114,6 @@ i.e.
   left: -0.75rem !important;
 }
 
-.usa-nav__primary {
-  button,
-  a.usa-nav__link {
-    padding-left: 0 !important;
-  }
-}
-
 .usa-sidenav__item {
   button,
   a {
@@ -416,11 +409,23 @@ Primary Nav Customizations
 ----------------------------------------
 */
 
+.usa-navbar {
+  .usa-logo {
+    a {
+      cursor: pointer;
+    }
+    
+    svg {
+        height: 50px;
+    }
+  }
+}
+
 @media (max-width: 64em) {
     .usa-navbar {
         .usa-logo {
             svg {
-                height: 35px !important;
+                height: 35px;
             }
         }
     }
