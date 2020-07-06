@@ -254,6 +254,10 @@ i.e.
 .usa-dark-background,
 .usa-hero__callout {
   @include u-bg('blue-50');
+
+  a {
+    color: #fff !important;
+  }
 }
 
 .wp-block-table {
