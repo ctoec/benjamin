@@ -20,7 +20,7 @@ function benjamin_get_sidebar($template, $position = 'none', $size ='BENJAMIN_ON
     <div class="sidebar <?php echo esc_attr($class); ?> widgetarea--<?php echo esc_attr($template); ?>">
         <div class="usa-accordion margin-bottom-3">
             <h2 class="usa-accordion__heading desktop:display-none">
-                <button class="usa-accordion__button" aria-expanded="true" aria-controls="sidebar">On this page...</button>
+                <button class="usa-accordion__button" aria-expanded="true" aria-controls="sidebar">In this Section</button>
             </h2>
             <div id="sidebar" class="usa-accordion__content padding-0">
                 <?php dynamic_sidebar($template); ?>
