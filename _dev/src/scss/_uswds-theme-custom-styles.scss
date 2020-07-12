@@ -193,37 +193,75 @@ i.e.
     position: relative;
     transform: translate(-50%,0);
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 46em) {
+      flex-direction: row-reverse;
+      min-height: 350px;
+
+      &--wave {
+        background-size: cover;
+        background-position: top right;
+        position: relative;
+        z-index: 1;
+        margin-right: 30%;
+      }
+
+      &--hero {
+        min-height: auto;
+        position: absolute;
+        background-size: contain;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+
+      .maxw-tablet {
+        max-width: 420px;
+      }
+    }
+
+    @media (min-width: 64em) {
+      flex-direction: row-reverse;
+      min-height: 400px;
+
+      &--wave {
+        margin-right: 25%;
+      }
+
+      .maxw-tablet {
+        max-width: 600px;
+      }
+    }
+
+    @media (min-width: 80em) {
+      &--wave {
+        margin-right: 300px;
+      }
+    }
 
     &--wave {
-      background-position: top right;
-      background-size: cover;
+      background-position: top left;
+      background-size: 1000px;
       background-repeat: no-repeat;
-      width: 75%;
-      min-height: 250px;
+      width: 100vw;
       display: flex;
       align-items: center;
 
-      @media (min-width: 64em) {
-        width: 75%;
-        min-height: 400px;
-      }
-
-      @media (min-width: 80em) {
-        width: 70%;
-        min-height: 600px;
+      .maxw-tablet {
+        max-width: 500px;
       }
     }
 
     &--hero {
       background-position: top right;
-      background-size: auto 100%;
+      background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
-      min-height: 250px;
-
-      @media (min-width: 64em) {
-        min-height: 400px;
-      }
+      min-height: 350px;
     }
 
     .text-white {
