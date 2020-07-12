@@ -32,6 +32,10 @@ i.e.
   }
 }
 
+.usa-sidenav > .has-current > button {
+  @extend .usa-current;
+}
+
 .usa-menu-btn {
   color: #61366F;
   background-color: transparent;
