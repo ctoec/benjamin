@@ -39,7 +39,22 @@ class BenjaminSideNavWalker extends Walker_Nav_Menu {
 
         $link_class = ($depth == 0) ? 'usa-nav-link' : '';
 
+        if ($args->walker->has_children) {
+            $output .= '<a class="' . esc_attr($classes) . '" href="' . esc_url($permalink) . '">';
+                $output .= '<span>' . $title . '</span>';
+            $output .= '</a>';
+        } else if( $permalink && $permalink != '#' ) {
+            $output .= '<a class="' . esc_attr($classes) . '" href="' . esc_url($permalink) . '">';
+                $output .= '<span>' . $title . '</span>';
+            $output .= '</a>';
+        } else {
+            $output .= '<span class="' . esc_attr($classes) . '">';
+                $output .= '<span>' . $title . '</span>';
+            $output .= '</span>';
+        }
 
+
+        /*
         if ($args->walker->has_children) {
             $output .= '<button class="' . esc_attr($classes) . '">';
                 $output .= '<span>' . $title . '</span>';
@@ -53,6 +68,7 @@ class BenjaminSideNavWalker extends Walker_Nav_Menu {
                 $output .= '<span>' . $title . '</span>';
             $output .= '</span>';
         }
+        */
 
         self::$count++;
 	}

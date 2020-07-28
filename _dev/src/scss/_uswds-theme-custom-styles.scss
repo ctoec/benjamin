@@ -102,7 +102,36 @@ i.e.
   padding-left: 1.75rem;
 }
 
-.usa-accordion {
+.sidebar {
+  .menu-trigger {
+    &:checked ~ .menu-control div {
+      background-image: url(../img/angle-arrow-up-primary.svg);
+    }
+
+    &:checked ~ .menu-content {
+      display: block;
+    }
+  }
+
+  .menu-control {
+    background: #f0f0f0;
+    display: none;
+    font-weight: bold;
+    padding: 0.825rem 1rem;
+    font-size: 1.125rem;
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+    
+    div {
+      background-image: url(../img/angle-arrow-down.svg);
+      background-position: right center;
+      background-size: 15px;
+      background-repeat: no-repeat;
+    }
+  }
+
   .widget-title {
     margin: 0;
     background-image: url(../img/plaid.png);
@@ -112,10 +141,15 @@ i.e.
     padding: 0.5rem 1rem;
     line-height: 1.1;
   }
+  
+  .menu-content .usa-sidenav {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 1024px) {
-  .usa-accordion {
+  .sidebar {
     .widget-title {
       border-top-left-radius: 6px;
       border-top-right-radius: 6px;
