@@ -514,7 +514,8 @@ Primary Nav Customizations
     .usa-navbar {
         .usa-logo {
             svg {
-                height: 35px;
+              height: 35px !important;
+              width: 36px !important;
             }
         }
     }
@@ -556,6 +557,10 @@ Primary Nav Customizations
         .usa-nav__submenu {
           z-index: 1000;
           list-style: none;
+        }
+
+        button.usa-nav__link {
+          background-position: right 1rem center;
         }
 
         button.usa-nav__link[aria-expanded=true] {

@@ -40,6 +40,10 @@
   opacity: 0.9;
 }
 
+.tooltip.bs-tooltip-top {
+  margin-bottom: -65px;
+}
+
 .tooltip.tooltip-top, .tooltip.bs-tether-element-attached-bottom {
   padding: 5px 0;
   margin-top: -3px;
@@ -169,6 +173,10 @@ html body .select2-container .select2-results__option .select2-results__option {
 
 html body .select2-container .select2-results__option .select2-results__option--highlighted {
     background-color: #6098af;
+}
+
+html body .select2-container .select2-results {
+  width: 100%;
 }
 
 html body .select2-container .select2-results > .select2-results__options {
@@ -313,71 +321,67 @@ html body .select2-container .select2-results > .select2-results__options {
     <select class="map-select">
         <option selected="" disabled="">Select a town or click on the map below...</option>
         <optgroup label="Middlesex County">
-            <option value="Chester">Chester</option>
-            <option value="Clinton">Clinton</option>
-            <option value="Cromwell">Cromwell</option>
-            <option value="Deep River">Deep River</option>
-            <option value="Durham">Durham</option>
-            <option value="East Haddam">East Haddam</option>
-            <option value="East Hampton">East Hampton</option>
-            <option value="Essex">Essex</option>
-            <option value="Haddam">Haddam</option>
-            <option value="Killingworth">Killingworth</option>
-            <option value="Middlefield">Middlefield</option>
-            <option value="Middletown">Middletown</option>
-            <option value="Old Saybrook">Old Saybrook</option>
-            <option value="Portland">Portland</option>
-            <option value="Westbrook">Westbrook</option>
-        </optgroup>
-        <optgroup label="New Haven County">
-            <option value="Ansonia">Ansonia</option>
-            <option value="Beacon Falls">Beacon Falls</option>
-            <option value="Bethany">Bethany</option>
-            <option value="Branford">Branford</option>
-            <option value="Cheshire">Cheshire</option>
-            <option value="Derby">Derby</option>
-            <option value="East Haven">East Haven</option>
-            <option value="Guilford">Guilford</option>
-            <option value="Hamden">Hamden</option>
-            <option value="Madison">Madison</option>
-            <option value="Meriden">Meriden</option>
-            <option value="Middlebury">Middlebury</option>
-            <option value="Milford">Milford</option>
-            <option value="Naugatuck">Naugatuck</option>
-            <option value="New Haven">New Haven</option>
-            <option value="North Branford">North Branford</option>
-            <option value="North Haven">North Haven</option>
-            <option value="Orange">Orange</option>
-            <option value="Oxford">Oxford</option>
-            <option value="Prospect">Prospect</option>
-            <option value="Seymour">Seymour</option>
-            <option value="Southbury">Southbury</option>
-            <option value="Wallingford">Wallingford</option>
-            <option value="Waterbury">Waterbury</option>
-            <option value="West Haven">West Haven</option>
-            <option value="Wolcott">Wolcott</option>
-            <option value="Woodbridge">Woodbridge</option>
-        </optgroup>
-        <optgroup label="Windham County">
-            <option value="Ashford">Ashford</option>
-            <option value="Brooklyn">Brooklyn</option>
-            <option value="Canterbury">Canterbury</option>
-            <option value="Chaplin">Chaplin</option>
-            <option value="Eastford">Eastford</option>
-            <option value="Hampton">Hampton</option>
-            <option value="Killingly">Killingly</option>
-            <option value="Plainfield">Plainfield</option>
-            <option value="Pomfret">Pomfret</option>
-            <option value="Putnam">Putnam</option>
-            <option value="Scotland">Scotland</option>
-            <option value="Sterling">Sterling</option>
-            <option value="Thompson">Thompson</option>
-            <option value="Windham">Windham</option>
-            <option value="Woodstock">Woodstock</option>
+          <option value="Ansonia">Ansonia</option>
+          <option value="Ashford">Ashford</option>
+          <option value="Beacon Falls">Beacon Falls</option>
+          <option value="Bethany">Bethany</option>
+          <option value="Branford">Branford</option>
+          <option value="Brooklyn">Brooklyn</option>
+          <option value="Canterbury">Canterbury</option>
+          <option value="Chaplin">Chaplin</option>
+          <option value="Cheshire">Cheshire</option>
+          <option value="Chester">Chester</option>
+          <option value="Clinton">Clinton</option>
+          <option value="Cromwell">Cromwell</option>
+          <option value="Deep River">Deep River</option>
+          <option value="Derby">Derby</option>
+          <option value="Durham">Durham</option>
+          <option value="East Haddam">East Haddam</option>
+          <option value="East Hampton">East Hampton</option>
+          <option value="East Haven">East Haven</option>
+          <option value="Eastford">Eastford</option>
+          <option value="Essex">Essex</option>
+          <option value="Guilford">Guilford</option>
+          <option value="Haddam">Haddam</option>
+          <option value="Hamden">Hamden</option>
+          <option value="Hampton">Hampton</option>
+          <option value="Killingly">Killingly</option>
+          <option value="Killingworth">Killingworth</option>
+          <option value="Madison">Madison</option>
+          <option value="Meriden">Meriden</option>
+          <option value="Middlebury">Middlebury</option>
+          <option value="Middlefield">Middlefield</option>
+          <option value="Middletown">Middletown</option>
+          <option value="Milford">Milford</option>
+          <option value="Naugatuck">Naugatuck</option>
+          <option value="New Haven">New Haven</option>
+          <option value="North Branford">North Branford</option>
+          <option value="North Haven">North Haven</option>
+          <option value="Old Saybrook">Old Saybrook</option>
+          <option value="Orange">Orange</option>
+          <option value="Oxford">Oxford</option>
+          <option value="Plainfield">Plainfield</option>
+          <option value="Pomfret">Pomfret</option>
+          <option value="Portland">Portland</option>
+          <option value="Prospect">Prospect</option>
+          <option value="Putnam">Putnam</option>
+          <option value="Scotland">Scotland</option>
+          <option value="Seymour">Seymour</option>
+          <option value="Southbury">Southbury</option>
+          <option value="Sterling">Sterling</option>
+          <option value="Thompson">Thompson</option>
+          <option value="Wallingford">Wallingford</option>
+          <option value="Waterbury">Waterbury</option>
+          <option value="Westbrook">Westbrook</option>
+          <option value="West Haven">West Haven</option>
+          <option value="Windham">Windham</option>
+          <option value="Wolcott">Wolcott</option>
+          <option value="Woodbridge">Woodbridge</option>
+          <option value="Woodstock">Woodstock</option>
         </optgroup>
         <optgroup label="Litchfield County">
             <option value="Barkhamsted">Barkhamsted</option>
-            <option value="Bethlehem ">Bethlehem </option>
+            <option value="Bethlehem">Bethlehem </option>
             <option value="Bridgewater">Bridgewater</option>
             <option value="Canaan">Canaan</option>
             <option value="Colebrook">Colebrook</option>
