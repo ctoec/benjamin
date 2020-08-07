@@ -1,5 +1,6 @@
 <?php
 $sticky = get_theme_mod('navbar_sticky_setting', 'no') == 'yes' ? 'sticky' : '';
+global $wp;
 ?>
 
 <div class="usa-overlay"></div>
@@ -44,38 +45,38 @@ $sticky = get_theme_mod('navbar_sticky_setting', 'no') == 'yes' ? 'sticky' : '';
                         </button>
                         <ul class="usa-nav__submenu notranslate" id="translations" hidden="">
                         <li class="usa-nav__submenu-item">
-                            <a href="#"data-google-lang="en">
-                            <span>English</span>
+                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=en">
+                                <span>English</span>
                             </a>
                         </li>
                         <li class="usa-nav__submenu-item">
-                            <a href="#" class="" data-google-lang="es">
-                            <span>Español</span>
+                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=es">
+                                <span>Español</span>
                             </a>
                         </li>
                         <li class="usa-nav__submenu-item">
-                            <a href="#" class="" data-google-lang="zh">
-                            <span>简体字</span>
+                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=zh">
+                                <span>简体字</span>
                             </a>
                         </li>
                         <li class="usa-nav__submenu-item">
-                            <a href="#" class="" data-google-lang="vi">
-                            <span>Tiếng Việt</span>
+                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=vi">
+                                <span>Tiếng Việt</span>
                             </a>
                         </li>
                         <li class="usa-nav__submenu-item">
-                            <a href="#" class="" data-google-lang="pt">
-                            <span>Portugese</span>
+                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=pt">
+                                <span>Portugese</span>
                             </a>
                         </li>
                         <li class="usa-nav__submenu-item">
-                            <a href="#" class="" data-google-lang="ar">
-                            <span>ٱلْعَرَبِيَّة</span>
+                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=ar">
+                                <span>ٱلْعَرَبِيَّة</span>
                             </a>
                         </li>
                         <li class="usa-nav__submenu-item">
-                            <a href="#" class="" data-google-lang="ht">
-                            <span>Kreyòl Ayisyen</span>
+                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=ht">
+                                <span>Kreyòl Ayisyen</span>
                             </a>
                         </li>
                         <li class="usa-translate__power">

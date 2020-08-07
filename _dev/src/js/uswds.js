@@ -1,6 +1,5 @@
 require('uswds');
 require('./scroll-to-top');
-require('./translate');
 require('./navigation');
 require('./link-icons');
 
