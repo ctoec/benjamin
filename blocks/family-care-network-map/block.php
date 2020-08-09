@@ -672,24 +672,6 @@ html body .select2-container .select2-results > .select2-results__options {
         </g>
     </g>
   </svg>
-    <legend>
-      <div class="grid-row">
-          <div class="tablet:grid-col">
-            <div><span class="swatch fairfield-county"></span> Fairfield County</div>
-            <div><span class="swatch hartford-county"></span> Hartford County</div>
-            <div><span class="swatch litchfield-county"></span> Litchfield County</div>
-          </div>
-          <div class="tablet:grid-col">
-            <div><span class="swatch middlesex-county"></span> Middlesex County</div>
-            <div><span class="swatch new-haven-county"></span> New Haven County</div>
-            <div><span class="swatch new-london-county"></span> New London County</div>
-          </div>
-          <div class="tablet:grid-col">
-            <div><span class="swatch tolland-county"></span> Tolland County</div>
-            <div><span class="swatch windham-county"></span> Windham County</div>
-          </div>
-      </div>
-    </legend>
   </div>
 
   <div class="data-div"></div>
@@ -751,7 +733,7 @@ html body .select2-container .select2-results > .select2-results__options {
       jQuery(this).addClass('active');
 
       // Add the town name.
-      jQuery('.data-div').html('<div class="title">Networks in '+town_name+'</div>');
+      jQuery('.data-div').html('<div class="title">Networks serving '+town_name+'</div>');
 
       // Get the network IDs for this town and put into an array.
       if (town_networks.length == 0) {
