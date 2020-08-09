@@ -44,48 +44,46 @@ global $wp;
                         <span id="selectedLanguage">Languages</span>
                         </button>
                         <ul class="usa-nav__submenu" id="translations" hidden="">
-
-                        <?php echo home_url( $wp->request ) ?>
-
-                        <li class="usa-nav__submenu-item">
-                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=en" target="_parent" class="nturl notranslate">
-                                <span>English</span>
-                            </a>
-                        </li>
-                        <li class="usa-nav__submenu-item">
-                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=es" target="_parent" class="nturl notranslate">
-                                <span>Español</span>
-                            </a>
-                        </li>
-                        <li class="usa-nav__submenu-item">
-                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=zh" target="_parent" class="nturl notranslate">
-                                <span>简体字</span>
-                            </a>
-                        </li>
-                        <li class="usa-nav__submenu-item">
-                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=vi" target="_parent" class="nturl notranslate">
-                                <span>Tiếng Việt</span>
-                            </a>
-                        </li>
-                        <li class="usa-nav__submenu-item">
-                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=pt" target="_parent" class="nturl notranslate">
-                                <span>Portugese</span>
-                            </a>
-                        </li>
-                        <li class="usa-nav__submenu-item">
-                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=ar" target="_parent" class="nturl notranslate">
-                                <span>ٱلْعَرَبِيَّة</span>
-                            </a>
-                        </li>
-                        <li class="usa-nav__submenu-item">
-                            <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=ht" target="_parent" class="nturl notranslate">
-                                <span>Kreyòl Ayisyen</span>
-                            </a>
-                        </li>
-                        <li class="usa-translate__power">
-                            <?php include(get_template_directory() . '/assets/frontend/img/translate.svg'); ?>
-                        </li>
+                            <li class="usa-nav__submenu-item">
+                                <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=es" data-language="es" target="_parent" class="nturl notranslate">
+                                    <span>Español</span>
+                                </a>
+                            </li>
+                            <li class="usa-nav__submenu-item">
+                                <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=zh" data-language="zh" target="_parent" class="nturl notranslate">
+                                    <span>简体字</span>
+                                </a>
+                            </li>
+                            <li class="usa-nav__submenu-item">
+                                <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=vi" data-language="vi" target="_parent" class="nturl notranslate">
+                                    <span>Tiếng Việt</span>
+                                </a>
+                            </li>
+                            <li class="usa-nav__submenu-item">
+                                <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=pt" data-language="pt" target="_parent" class="nturl notranslate">
+                                    <span>Portugese</span>
+                                </a>
+                            </li>
+                            <li class="usa-nav__submenu-item">
+                                <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=ar" data-language="ar" target="_parent" class="nturl notranslate">
+                                    <span>ٱلْعَرَبِيَّة</span>
+                                </a>
+                            </li>
+                            <li class="usa-nav__submenu-item">
+                                <a href="https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=ht" data-language="ht" target="_parent" class="nturl notranslate">
+                                    <span>Kreyòl Ayisyen</span>
+                                </a>
+                            </li>
+                            <li class="usa-translate__power">
+                                <?php include(get_template_directory() . '/assets/frontend/img/translate.svg'); ?>
+                            </li>
                         </ul>
+                        <script>
+                            jQuery('a.nturl').click(function(e) {
+                                e.preventDefault();
+                                window.top.location.href = "https://translate.google.com/translate?hl=en&sl=en&u=<?php echo home_url( $wp->request ) ?>&tl=" + jQuery(this).data('language');
+                            })
+                        </script>
                     </li>
                 </ul>
                 <form class="usa-search usa-search--small ">
