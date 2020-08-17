@@ -161,6 +161,20 @@ i.e.
   }
 }
 
+#filter-trigger {
+  background-image: url(../img/angle-arrow-down.svg);
+  background-position: right center;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  padding-right: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  &.is-active {
+    background-image: url(../img/angle-arrow-up-primary.svg);
+  }
+}
+
 .usa-sidenav .usa-current:after {
   left: -0.75rem !important;
 }
@@ -482,7 +496,7 @@ Search filter
 .sf-field-submit {
   input {
     @extend .usa-button;
-    margin-top: 0;
+    margin-top: 0 !important;
   }
 }
 
@@ -848,4 +862,112 @@ body {
     width: 100%;
     height: 100%;
   }
+}
+
+
+/*
+----------------------------------------
+Cards
+----------------------------------------
+*/
+
+.card-container {
+  &:not(:first-child) {
+    @media (max-width: 40em) {
+      margin-top: 15px;
+    }
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 6px;
+  border-left: 4px solid #61366F;
+  box-sizing: border-box;
+  box-shadow: 0 0 4px rgba(0,0,0,0.25);
+  width: 100%;
+  padding: 20px;
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+
+  @media (max-width: 40em) {
+    flex-direction: row;
+
+    .card-image {
+      margin-right: 15px;
+      align-items: flex-start;
+
+      img {
+        width: 35px;
+        height: auto;
+      }
+    }
+  }
+}
+
+a.card-content {
+  &:hover {
+    .card-name {
+      text-decoration: underline;
+    }
+  }
+}
+
+.card-name {
+  font-size: 1.25rem;
+  line-height: 1.1;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: rgb(27, 27, 27);
+}
+
+.card-description {
+  color: rgb(27, 27, 27);
+}
+
+.card-image {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    height: 75px;
+  }
+}
+
+.searchandfilter {
+  width: 100%;
+  max-width: none !important;
+
+  .sf-input-text {
+    max-width: 40rem;
+  }
+}
+
+.sf-field-taxonomy-news-category {
+  width: 100%;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  li {
+    width: 45%;
+    padding-right: 1rem !important;
+    display: flex;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+}
+
+.search-box {
+  background: #E3F2FE;
+  padding: 2rem;
+  border-bottom: 1px solid #dfe1e2;
 }

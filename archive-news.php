@@ -48,7 +48,18 @@ if (!$hide_content) :
             endif;
             ?>
             <div class="<?php echo esc_attr($main_width); ?>">
-                <h1 class="text-ct-blue font-sans-xl text-normal margin-top-0">News &amp; Updates</h1>
+                <h1 class="font-sans-xl text-normal margin-top-0">News</h1>
+                <p>Stay up to date on OEC’s work. Get the latest news on our programs, regulations, events, and more.</p>
+                <hr class="margin-bottom-2 padding-bottom-2 border-top-0 border-left-0 border-bottom border-base-lighter" />
+                <div id="filter-trigger" class="text-right margin-bottom-1">
+                    Filter results
+                </div>
+                <div id="filter-content" class="search-box margin-bottom-3">
+                    <?php echo do_shortcode('[searchandfilter id="4896"]'); ?>
+                </div>
+                <div class="margin-bottom-3">
+                    <strong><?php echo $wp_query->found_posts ?></strong> news results
+                </div>
                 <div class="usa-prose">
                     <?php
                         
