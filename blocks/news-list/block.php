@@ -8,8 +8,9 @@
             block_row( 'categories' );
 
             $foo = block_sub_value( 'category' );
+
             if ( $foo ) {
-                $categories[] = $foo['id'];
+                $categories[] = $foo->term_id;
             }
         endwhile;
     endif;
