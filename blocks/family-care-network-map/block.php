@@ -700,7 +700,7 @@ html body .select2-container .select2-results > .select2-results__options {
   var network11 = ['11', 'CT Family Resource Center Network - Meriden Hub', 'Cathy Battista', 'cathy.battista@meridenk12.org', '203-238-2316', '426 West Main Street<br>Meriden, CT 06451'];
   var network12 = ['12', 'CT Family Resource Center Network - Branford Hub', 'Michele Krumenacker', 'mkrumenacker@branfordschools.org', '203-481-5066', '12 Melrose Avenue<br>Branford, CT 06405'];
   var network13 = ['13', 'CT Family Resource Center Network - Hebron Hub', 'Becky Murray', 'beckym@ahmyouth.org', '860-918-1228', '25 Pendleton Drive<br>Hebron, CT 06248'];
-  var network14 = ['14', 'CT Family Resource Center Network - Tolland Hub', 'Laurel Leibowitz', 'lleibowitz@tolland.k12.ct.us', '860-315-5622', '247 Rhodes Road<br>Tolland, CT 06084'];
+  var network14 = ['14', 'Enfield Family Resource Center', 'Amy Morales', 'AMorales@enfield.org', '860-253-4721', '27 Shaker Road<br>Enfield, CT 06082'];
   var network15 = ['15', 'All Our Kin, Danbury', 'Yazmin Iglesias', 'danbury@allourkin.org', '203-800-8386', '301 Main Street, Suite 2-5<br>Danbury, CT 06810'];
 
 
