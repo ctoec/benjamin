@@ -25,7 +25,7 @@ get_header();
  *
  */
 extract(benjamin_template_settings());
-$template = 'news-sidebar';
+$template = 'network-sidebar';
 
 $terms = get_terms('news-category');
 
@@ -48,19 +48,12 @@ if (!$hide_content) :
             endif;
             ?>
             <div class="<?php echo esc_attr($main_width); ?>">
-                <h1 class="font-sans-xl text-normal margin-top-0">News</h1>
-                <p>Stay up to date on OEC’s work. Get the latest news on our programs, regulations, events, and more.</p>
-                <hr class="margin-bottom-2 padding-bottom-2 border-top-0 border-left-0 border-bottom border-base-lighter" />
-                <div id="filter-trigger" class="text-right margin-bottom-1">
-                    Filter results
-                </div>
-                <div id="filter-content" class="search-box margin-bottom-3">
-                    <?php echo do_shortcode('[searchandfilter id="4896"]'); ?>
-                </div>
-                <div class="margin-bottom-3">
-                    <strong><?php echo $wp_query->found_posts ?></strong> news results
+                <div class="margin-bottom-4">
+                    <h1 class="margin-0 font-heading-3xl line-height-mono-1">Find your family child care network</h1>
                 </div>
                 <div class="usa-prose">
+                    <p>To access some of the supports in the CTCARES for <a href="https://www.ctoec.org/covid-19/ctcares-for-family-child-care/">Family Child Care program</a>, providers need to join their area’s family child care network.</p>
+				   <h2 class="text-ct-blue font-sans-lg text-normal margin-top-0">Networks</h2>
                     <?php
                         
                         if (have_posts()) :
@@ -73,15 +66,20 @@ if (!$hide_content) :
                             * If you want to override this in a child theme, then include a file
                             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
                             */
-                                get_template_part('template-parts/feed/news', get_post_format());
+                                get_template_part('template-parts/feed/network', get_post_format());
                             endwhile;
 
                         else :
-                            get_template_part('template-parts/feed/news', 'none');
+                            get_template_part('template-parts/feed/network', 'none');
                         endif;
                     ?>
                     <div class="grid-row">
-                        <?php bm_numeric_pagination(); ?>
+                        <div class="flex-fill">
+                            <?php next_posts_link( 'View More' ); ?>
+                        </div>
+                        <div class="flex-fill text-right">
+                            <?php previous_posts_link( 'View Newer' ); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="margin-top-8">

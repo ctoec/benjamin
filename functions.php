@@ -164,4 +164,41 @@ function calendar_sidebar() {
   register_sidebar( $args );
 }
 
+/**
+ * numeric pagination for custom queries
+ * Much nicer than next and previous links :)
+ *
+ * @global type $wp_query
+ * @param type $pageCount
+ * @param type $query
+ * @return type
+ */
+function bm_numeric_pagination( $page_count = 9, $query = null ) {
+
+	if ( null == $query ) {
+		global $wp_query;
+		$query = $wp_query;
+	}
+
+	if ( 1 >= $query->max_num_pages ) {
+		return;
+	}
+
+	$big = 9999999999; // need an unlikely integer
+
+	echo '<div id="archive-pagination pagination">';
+	echo paginate_links( array(
+		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+		'format' => '?paged=%#%',
+		'current' => max( 1, get_query_var( 'paged' )),
+		'total' => $query->max_num_pages,
+		'end_size' => 0,
+		'mid_size' => $page_count,
+		'next_text' => __( 'Older ›', 'textdomain' ),
+		'prev_text' => __( '‹ Newer', 'textdomain' )
+	));
+	echo '</div>';
+
+}
+
 ?>

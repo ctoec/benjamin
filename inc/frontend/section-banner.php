@@ -4,7 +4,7 @@ $sidebars = wp_get_sidebars_widgets();
 
 ?>
 <!-- Gov banner BEGIN -->
-<div class="usa-dark-background padding-y-2 padding-x-2 tablet:padding-x-4 text-white">
+<div class="usa-alert-banner">
     <?php echo stripslashes(get_theme_mod('banner_text_setting', null));  //WPCS: xss ok. ?>
 </div>  <!-- end accordion header -->
 

@@ -20,10 +20,10 @@ get_header();
  */
 
 extract(benjamin_template_settings());
-$template = 'news-sidebar';
+$template = 'network-sidebar';
 if (! $hide_content) :
 ?>
-<section id="primary">
+<section id="primary" class="margin-bottom-6">
     <div class="grid-container margin-top-6">
         <?php
             if ( function_exists('yoast_breadcrumb') ) {
@@ -39,10 +39,7 @@ if (! $hide_content) :
             endif;
             ?>
             <div class="usa-prose <?php echo esc_attr($main_width); ?>">
-		<h1 class="text-ct-blue font-sans-xl text-normal margin-top-10"><?php the_title(); ?></h1>
-		<div class="margin-top-205">
-			<div class="text-base text-bold font-sans-xs text-uppercase">Last updated <?php the_modified_date('F j, Y'); ?></div>
-		</div>
+                <h1 class="text-ct-blue font-sans-xl text-normal margin-top-10"><?php the_title(); ?></h1>
                 <?php
                     while (have_posts()) :
                         the_post();

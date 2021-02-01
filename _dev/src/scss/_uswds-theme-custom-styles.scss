@@ -20,9 +20,118 @@ i.e.
 ----------------------------------------
 */
 
+/*
+* * *  Updated Header
+*/
+
+.usa-alert-banner{
+  padding:1rem;
+  text-align:center;
+  border:1px solid #eba361;
+  background:#fef8f3;
+  color:#8a5321;
+  
+  a {
+    color:#8a5321;
+    margin-left:1rem;
+  }
+}
+
+.usa-logo{
+  margin-top:1.25rem!important;
+  margin-bottom:1.25rem!important;
+}
+
+.ct-header {
+  background-color: #20507f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.gsc-search-button.gsc-search-button-v2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+  padding: 0;
+  width: 40px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.ct-translations {
+  margin-left: auto;
+  color: #fff;
+  position: relative;
+  input {
+    display: none;
+    &:checked~.ct-translations-label {
+      background-color: #162e51;
+    }
+    &:checked~.ct-translations-list {
+      display: block;
+    }
+  }
+}
+.ct-translations-list {
+  position: absolute;
+  background: #162e51;
+  right: 0;
+  top: 2.5rem;
+  z-index: 1000;
+  width: 250px;
+  padding: 0;
+  display: none;
+  list-style: none;
+  a {
+    display: block;
+    padding: .75rem 1rem;
+    font-size: .87rem;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .usa-translate__power {
+    padding: .5rem 1rem;
+  }
+  svg {
+    height: 30px;
+  }
+}
+.ct-translations-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 1rem;
+  img {
+    margin-right: 7px;
+    height: 24px;
+  }
+}
+
 .wp-block-image {
   margin-left: 0;
   margin-right: 0;
+  
+  img {
+    height: auto;
+  }
 }
 
 .usa-overlay.is-visible ~ .usa-header {

@@ -18,10 +18,10 @@
       <div class="grid-row grid-gap">
         <div class="tablet:grid-col-7 margin-top-5 tablet:margin-top-0">
           <div class="grid-row grid-gap">
-            <div class="margin-right-6">
+            <div class="grid-col-12 tablet:grid-col-auto margin-right-6 margin-bottom-4 desktop:margin-bottom-0">
               <a href="https://www.ct.gov"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/ct.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-6" />'); ?></a>
             </div>
-            <div class="margin-top-6 tablet:margin-top-0">
+            <div class="grid-col-12 tablet:grid-col-auto">
               <a href="/"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/logo-white.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-6" />'); ?></a>
             </div>
           </div>
@@ -41,45 +41,6 @@
         <a href="https://www.facebook.com/ctoec" class="margin-right-3"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/social-icons/facebook.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-4" />'); ?></a>
         <a href="https://twitter.com/ct_oec" class="margin-right-3"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/social-icons/twitter.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-4" />'); ?></a>
         <a href="https://www.instagram.com/ctoecgov/" class="margin-right-3"><?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/social-icons/instagram.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-4" />'); ?></a>
-      </div>
-      <div class="footer-list margin-top-3 display-none desktop:display-flex desktop:flex-justify-center">
-        <ul class="notranslate flex-center">
-          <li>
-            <a href="#"data-google-lang="en">
-              <span>English</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="" data-google-lang="es">
-              <span>Español</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="" data-google-lang="zh">
-                <span>简体字</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="" data-google-lang="vi">
-              <span>Tiếng Việt</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="" data-google-lang="pt">
-              <span>Portugese</span>
-            </a>
-          </li>
-          <li>
-          <a href="#" class="" data-google-lang="ar">
-                        <span>ٱلْعَرَبِيَّة</span>
-                        </a>
-          </li>
-          <li>
-            <a href="#" class="" data-google-lang="ht">
-              <span>Kreyòl Ayisyen</span>
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   </div>

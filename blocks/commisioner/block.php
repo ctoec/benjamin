@@ -7,6 +7,7 @@
     $contact_content = block_value( 'contact-content' );
     $image = block_value( 'commissioner-image' );
     $name = block_value( 'commissioner-name' );
+    $bio = block_value( 'commissioner-bio' );
 ?>
 
 <div class="b b--commissioner padding-y-8 usa-prose">
@@ -40,6 +41,7 @@
                     <?php } ?>
                     <div class="text-white text-bold font-sans-md"><?php echo $name ?></div>
                     <div class="text-white font-sans-sm">Commissioner</div>
+                    <div class="text-white font-sans-sm"><?php echo $bio ?></div>
                 </div>
             </div>
         </div>
