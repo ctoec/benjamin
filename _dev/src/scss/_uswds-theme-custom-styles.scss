@@ -138,6 +138,7 @@ i.e.
   .usa-menu-btn {
     background-color: #61366F;
     color: #ffffff;
+    height: 3rem;
   }
 }
 
@@ -149,6 +150,7 @@ i.e.
   color: #61366F;
   background-color: transparent;
   cursor: pointer;
+  height: auto;
 
   svg {
     height: 18px;
@@ -218,7 +220,7 @@ i.e.
     }
 
     &:checked ~ .menu-content {
-      display: block;
+      display: block !important;
     }
   }
 
@@ -473,8 +475,11 @@ i.e.
 }
 
 .wp-block-table {
-  @extend .usa-table;
   @include u-width('full');
+  
+  table {
+    @extend .usa-table;
+  }
 }
 
 .wp-block-simple-alert {
@@ -790,8 +795,21 @@ Primary Nav Customizations
   min-width: 208px;
 }
 
+.gsc-input-box {
+  padding: 0.5rem !important;
+}
+
+.gsib_b {
+  display: none !important;
+}
+
+.gsib_a {
+  vertical-align: top !important;
+}
+
 .gsc-input {
   padding: 0 !important;
+  background: none !important;
 }
 
 .gsc-input-box {
