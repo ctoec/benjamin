@@ -25,14 +25,13 @@ i.e.
 */
 
 .usa-alert-banner{
-  padding:1rem;
+  padding: 1.5rem;
   text-align:center;
-  border:1px solid #eba361;
-  background:#fef8f3;
-  color:#8a5321;
+  background: #162e51;
+  color: #fff;
   
   a {
-    color:#8a5321;
+    color: #fff;
     margin-left:1rem;
   }
 }
@@ -139,6 +138,7 @@ i.e.
     background-color: #61366F;
     color: #ffffff;
     height: 3rem;
+    min-height: 70px;
   }
 }
 
