@@ -18,7 +18,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "path": "^0.12.7",
     "uswds": "^2.0.3",
-    "uswds-gulp": "github:uswds/uswds-gulp",
+    "uswds-gulp": "github:uswds/uswds-gulp#279282febe11ccf479ae060a947eec478e1a35fb",
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {

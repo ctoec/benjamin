@@ -24,6 +24,84 @@ i.e.
 * * *  Updated Header
 */
 
+.ct-callout {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  
+  &-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  
+  &-wrap {
+    margin: 0 0 1rem;
+  }
+  
+  &-card {
+    border-color: rgb(91,57,107);
+    border-radius: 6px;
+    padding: 2rem;
+    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+    
+    svg {
+      width: 3rem;
+      max-height: 3rem;
+    }
+    
+    p {
+      margin: 1rem 0 0;
+    }
+    
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  &--vertical {
+    flex-direction: column;
+    
+    .ct-callout-card {
+      border-left-width: 4px;
+      border-left-style: solid;
+      display: flex;
+      
+      .ct-callout-icon {
+        margin-right: 1rem;
+      }
+    }
+  }
+  
+  &--horizontal {
+    @extend .grid-row;
+    @extend .grid-gap;
+    
+    .ct-callout-icon {
+      text-align: center;
+      margin-bottom: 1rem;
+      
+      svg {
+        margin: 0 auto; 
+      }
+    }
+    
+    .ct-callout-wrap {
+      @extend .grid-col-6;
+      display: flex;
+      
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    
+    .ct-callout-card {
+      border-top-width: 4px;
+      border-top-style: solid;
+      flex-grow: 1;
+    }
+  }
+}
+
 .usa-alert-banner{
   padding: 1.5rem;
   text-align:center;

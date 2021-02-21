@@ -39,6 +39,7 @@ if(!defined('BENJAMIN_POST_FORMATS')) {
     ));
 }
 
+require_once get_template_directory() . '/post-types/icons.php';
 require_once get_template_directory() . '/post-types/news-updates.php';
 require_once get_template_directory() . '/post-types/forms-documents.php';
 require_once get_template_directory() . '/template-parts/forms/gravity.php';
