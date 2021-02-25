@@ -18,24 +18,34 @@
     </div>
     <div class="ct-translations">
         <input type="checkbox" name="ct-translate" id="ct-translate" />
-        <label class="ct-translations-label" for="ct-translate" tabindex="0">
+        <label id="ct-translate-label" class="ct-translations-label" for="ct-translate" tabindex="0">
             <?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/globe-americas.svg" class="display-block width-3 height-4" role="presentation" />'); ?>
             <span>Languages</span>
         </label>
+        <script>
+            // Get arbitrary element with id "my-element"
+            var isInside = document.querySelector('#ct-translate-label');
+            
+            // Listen for click events on body
+            document.body.addEventListener('click', function (event) {
+                console.log(isInside.contains(event.target) || event.target.id == 'ct-translate');
+                
+                if (isInside.contains(event.target) || event.target.id == 'ct-translate') {
+                    return;
+                } else {
+                    setTimeout(function() {
+                        let inputTrigger = document.getElementById('ct-translate');
+                        if (inputTrigger.checked) {
+                            inputTrigger.checked = false;
+                        } 
+                    }, 100);
+                }
+            });
+        </script>
         <ul class="ct-translations-list" id="translations">
             <li class="usa-nav__submenu-item">
             <a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;u=https://www.ctoec.org&amp;tl=es" data-language="es" target="_parent" class="nturl notranslate">
             <span>Español</span>
-            </a>
-            </li>
-            <li class="usa-nav__submenu-item">
-            <a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;u=https://www.ctoec.org&amp;tl=zh" data-language="zh" target="_parent" class="nturl notranslate">
-            <span>简体字</span>
-            </a>
-            </li>
-            <li class="usa-nav__submenu-item">
-            <a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;u=https://www.ctoec.org&amp;tl=vi" data-language="vi" target="_parent" class="nturl notranslate">
-            <span>Tiếng Việt</span>
             </a>
             </li>
             <li class="usa-nav__submenu-item">
@@ -44,13 +54,33 @@
             </a>
             </li>
             <li class="usa-nav__submenu-item">
-            <a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;u=https://www.ctoec.org&amp;tl=ar" data-language="ar" target="_parent" class="nturl notranslate">
-            <span>ٱلْعَرَبِيَّة</span>
+            <a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;u=https://www.ctoec.org&amp;tl=pl" data-language="pl" target="_parent" class="nturl notranslate">
+            <span>Polski</span>
+            </a>
+            </li>
+            <li class="usa-nav__submenu-item">
+            <a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;u=https://www.ctoec.org&amp;tl=ko" data-language="ko" target="_parent" class="nturl notranslate">
+            <span>한국어/韓國語</span>
+            </a>
+            </li>
+            <li class="usa-nav__submenu-item">
+            <a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;u=https://www.ctoec.org&amp;tl=zh" data-language="zh" target="_parent" class="nturl notranslate">
+            <span>简体字</span>
             </a>
             </li>
             <li class="usa-nav__submenu-item">
             <a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;u=https://www.ctoec.org&amp;tl=ht" data-language="ht" target="_parent" class="nturl notranslate">
             <span>Kreyòl Ayisyen</span>
+            </a>
+            </li>
+            <li class="usa-nav__submenu-item">
+            <a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;u=https://www.ctoec.org&amp;tl=ar" data-language="ar" target="_parent" class="nturl notranslate">
+            <span>ٱلْعَرَبِيَّة</span>
+            </a>
+            </li>
+            <li class="usa-nav__submenu-item">
+            <a href="https://translate.google.com/translate?hl=en&amp;sl=en&amp;u=https://www.ctoec.org&amp;tl=en" data-language="ar" target="_parent" class="nturl notranslate">
+            <span>Translate more languages</span>
             </a>
             </li>
             <li class="usa-translate__power">
