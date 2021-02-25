@@ -18,8 +18,8 @@
     </div>
     <div class="ct-translations">
         <input type="checkbox" name="ct-translate" id="ct-translate" />
-        <label class="ct-translations-label" for="ct-translate">
-            <?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/globe-americas.svg" alt="' . get_bloginfo('name', 'display') . '" class="display-block width-3 height-4" />'); ?>
+        <label class="ct-translations-label" for="ct-translate" tabindex="0">
+            <?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/globe-americas.svg" class="display-block width-3 height-4" role="presentation" />'); ?>
             <span>Languages</span>
         </label>
         <ul class="ct-translations-list" id="translations">
