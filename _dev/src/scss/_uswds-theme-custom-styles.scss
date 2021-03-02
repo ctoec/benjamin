@@ -43,8 +43,19 @@ i.e.
 
 .ct-hero {
   position: relative;
-  min-height: 300px;
+  min-height: 350px;
   max-height: 500px;
+  
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(89.97deg, #61366F 50.57%, rgba(97, 54, 111, 0) 69.85%);
+    mix-blend-mode: multiply;
+  }
   
   &-title {
     display: flex;
@@ -57,7 +68,6 @@ i.e.
     z-index: 2;
     align-items: center;
     justify-content: flex-start;
-    background: rgba(0,0,0,0.7);
     
     h1 {
       color: #ffffff;

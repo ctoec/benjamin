@@ -28,10 +28,11 @@ if(!$hide_content):
         <div class="ct-hero">
             <div class="ct-hero-title">
                 <div class="grid-container width-full">
-                    <h1 class="margin-0 margin-bottom-1 font-heading-3xl line-height-mono-1"><?php the_title() ?></h1>
+                    <h1 class="margin-0 margin-bottom-1 font-heading-3xl line-height-mono-1 maxw-mobile-lg"><?php the_title() ?></h1>
                 </div>
             </div>
             <div class="ct-hero-image">
+                <div class="ct-hero-overlay"></div>
                 <?php echo get_the_post_thumbnail() ?>
             </div>
         </div>
