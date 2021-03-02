@@ -10,9 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
-    <div class="margin-top-neg-05">
-        <h1 class="margin-0 margin-bottom-1 font-heading-3xl line-height-mono-1"><?php the_title() ?></h1>
-    </div>
     <?php the_content(); ?>
     <?php if (get_edit_post_link()) : ?>
         <footer class="entry-footer">

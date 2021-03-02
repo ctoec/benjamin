@@ -21,8 +21,22 @@ get_header();
  */
 extract(benjamin_template_settings());
 if(!$hide_content):
+    $has_image = has_post_thumbnail();
 ?>
 <section id="primary">
+    <?php if ($has_image) { ?>
+        <div class="ct-hero">
+            <div class="ct-hero-title">
+                <div class="grid-container width-full">
+                    <h1 class="margin-0 margin-bottom-1 font-heading-3xl line-height-mono-1 maxw-mobile-lg"><?php the_title() ?></h1>
+                </div>
+            </div>
+            <div class="ct-hero-image">
+                <div class="ct-hero-overlay"></div>
+                <?php echo get_the_post_thumbnail() ?>
+            </div>
+        </div>
+    <?php } ?>
     <div class="grid-container margin-top-6">
         <?php
             if ( function_exists('yoast_breadcrumb') ) {
@@ -38,10 +52,21 @@ if(!$hide_content):
             endif;
             ?>
             <div class="usa-prose <?php echo esc_attr($main_width); ?>">
+                <?php if(!$has_image): ?>
+                    <div class="margin-top-neg-05">
+                        <h1 class="margin-0 margin-bottom-1 font-heading-3xl line-height-mono-1"><?php the_title() ?> test</h1>
+                    </div>
+                <?php endif; ?>
                 <?php
                 while (have_posts()) : the_post();
 
-                    get_template_part('template-parts/singles/content', 'page');
+                    get_template_part(
+                        'template-parts/singles/content', 
+                        'page',
+                        array(
+                            'has_image' => $has_image,
+                        )
+                    );
 
                 endwhile; // End of the loop.
                 ?>
