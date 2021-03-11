@@ -1,0 +1,75 @@
+.ct-callout {
+	  display: flex;
+	  flex-wrap: wrap;
+	  
+	  &-title {
+		font-size: 1.25rem;
+		font-weight: 700;
+	  }
+	  
+	  &-card {
+		border-color: rgb(97,54,111);
+		border-radius: .25rem;
+		padding: 2rem;
+		box-shadow: .1rem .25rem 1.25rem rgba(97,54,111,.1);
+		
+		svg {
+		  width: 2.5rem;
+		  max-height: 2.5rem;
+		}
+		
+		p {
+		  margin: 1rem 0 0;
+		}
+		
+		p:first-child {
+		  margin-top: 0;
+		}
+	  }
+	  
+	  &--horizontal {
+		flex-direction: column;
+		margin-bottom: .275rem;
+		
+		.ct-callout-card {
+		  border-left-width: 4px;
+		  border-left-style: solid;
+		  display: flex;
+		  margin-bottom: .275rem;
+		  
+		  .ct-callout-icon {
+			margin-right: 1rem;
+		  }
+		}
+	  }
+	  
+	  &--card {
+		@extend .grid-row;
+		@extend .grid-gap;
+		
+		.ct-callout-icon {
+		  text-align: center;
+		  margin-bottom: 1rem;
+		  
+		  svg {
+			margin: 0 auto; 
+		  }
+		}
+		
+		.ct-callout-wrap {
+		  @extend .grid-col-6;
+		  display: flex;
+		  
+		  @media (max-width: 768px) {
+			width: 100%;
+		  }
+		}
+		
+		.ct-callout-card {
+		  border-top-width: .375rem;
+		  border-top-style: solid;
+		  flex-grow: 1;
+		  margin-bottom: .5rem;
+		}
+	}
+}

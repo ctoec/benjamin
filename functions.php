@@ -39,6 +39,11 @@ if(!defined('BENJAMIN_POST_FORMATS')) {
     ));
 }
 
+function admin_css() {
+  wp_enqueue_style("admin_styles" , get_template_directory_uri() . "/assets/frontend/css/wp-admin.css");
+}
+add_action("admin_head", "admin_css");
+
 require_once get_template_directory() . '/post-types/icons.php';
 require_once get_template_directory() . '/post-types/news-updates.php';
 require_once get_template_directory() . '/post-types/forms-documents.php';
