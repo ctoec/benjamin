@@ -23,14 +23,14 @@ extract(benjamin_template_settings());
 if(!$hide_content):
 ?>
 <section id="primary">
-    <div class="grid-container margin-top-6">
+    <div class="grid-container margin-top-4">
         <?php
             if ( function_exists('yoast_breadcrumb') ) {
                 yoast_breadcrumb( '<div class="breadcrumbs">','</div>' );
             }
         ?>
     </div>
-    <div class="grid-container margin-top-6">
+    <div class="grid-container margin-top-4">
         <div class="grid-row grid-gap">
             <?php
             if($sidebar_position == 'left'):

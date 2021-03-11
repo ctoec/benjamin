@@ -33,18 +33,18 @@ if(!$hide_content):
             </div>
             <div class="ct-hero-image">
                 <div class="ct-hero-overlay"></div>
-                <?php echo get_the_post_thumbnail() ?>
+                <div class="ct-hero-image" style="background-image: url(<?php echo get_the_post_thumbnail_url() ?>);"></div>
             </div>
         </div>
     <?php } ?>
-    <div class="grid-container margin-top-6">
+    <div class="grid-container margin-top-4">
         <?php
             if ( function_exists('yoast_breadcrumb') ) {
                 yoast_breadcrumb( '<div class="breadcrumbs">','</div>' );
             }
         ?>
     </div>
-    <div class="grid-container margin-top-6">
+    <div class="grid-container margin-top-4">
         <div class="grid-row grid-gap">
             <?php
             if($sidebar_position == 'left'):

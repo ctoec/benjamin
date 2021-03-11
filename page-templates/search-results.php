@@ -23,7 +23,7 @@ extract( benjamin_template_settings() );
 
 if( !$hide_content ):
 ?>
-<section id="breadcrumbs" class="grid-container margin-top-6">
+<section id="breadcrumbs" class="grid-container margin-top-4">
     <?php
         if ( function_exists('yoast_breadcrumb') ) {
             yoast_breadcrumb( '<div class="breadcrumbs">','</div>' );

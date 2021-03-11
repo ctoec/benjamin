@@ -121,7 +121,7 @@ i.e.
 
 .ct-hero {
   position: relative;
-  min-height: 350px;
+  min-height: 300px;
   max-height: 500px;
   
   &-overlay {
@@ -131,8 +131,13 @@ i.e.
     right: 0;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(89.97deg, #61366F 50.57%, rgba(97, 54, 111, 0) 69.85%);
+    background: rgba(97, 54, 111, 0.95);
     mix-blend-mode: multiply;
+    z-index: 2;
+    
+    @media (min-width: 64em) {
+      background: linear-gradient(89.97deg, rgba(97, 54, 111, 0.95) 50.57%, rgba(97, 54, 111, 0) 69.85%);
+    }
   }
   
   &-title {
@@ -162,13 +167,8 @@ i.e.
     bottom: 0;
     width: 100%;
     z-index: 1;
-    
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
+    background-size: cover;
+    background-position: center;
   }
 }
 
