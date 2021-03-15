@@ -28,7 +28,7 @@ if(!$hide_content):
         <div class="ct-hero">
             <div class="ct-hero-title">
                 <div class="grid-container width-full usa-prose">
-                    <h1 class="margin-0 margin-bottom-1 font-heading-3xl maxw-mobile-lg"><?php the_title() ?></h1>
+                    <h1 class="margin-0 margin-bottom-1 font-heading-3xl maxw-tablet"><?php the_title() ?></h1>
                 </div>
             </div>
             <div class="ct-hero-image">

@@ -10,10 +10,12 @@
 
 <div class="b padding-y-8<?php if($theme == 'grey') { ?> bg-gray-5<?php } ?>">
     <div class="grid-container">
-        <div class="grid-row usa-prose flex-align-center">
+        <div class="grid-row flex-align-center">
             <div class="grid-col-fill maxw-tablet order-<?php if ($isLeft) { ?>last desktop:margin-left-7<?php } else { ?>first desktop:margin-right-7<?php } ?>">
-                <h2 class="text-ct-blue font-sans-xl text-normal margin-top-0 line-height-sans-2"><?php echo $title ?></h2>
-                <div class="margin-bottom-3"><?php echo $content ?></div>
+                <h2 class="text-ct-blue font-sans-xl text-normal margin-top-0 line-height-sans-2 text-bold"><?php echo $title ?></h2>
+                <div class="usa-prose">
+                    <p class="margin-top-0 margin-bottom-3"><?php echo $content ?></p>
+                </div>
                 <?php if ($linksHeading) { ?>
                     <div class="text-bold line-height-sans-6"><?php echo $linksHeading ?></div>
                 <?php } ?>

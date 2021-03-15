@@ -10,12 +10,16 @@
     $bio = block_value( 'commissioner-bio' );
 ?>
 
-<div class="b b--commissioner padding-y-8 usa-prose">
-    <div class="grid-container">
-        <h2 class="text-white text-center font-sans-xl text-normal margin-top-0 line-height-sans-2"><?php echo $title ?></h2>
+<div class="b b--commissioner padding-y-8">
+    <div class="grid-container width-full">
+        <h2 class="text-white text-center font-sans-xl text-normal margin-top-0 line-height-sans-2 text-bold"><?php echo $title ?></h2>
         <div class="grid-row">
             <div class="tablet:grid-col-7">
-                <div class="text-white margin-bottom-5"><?php echo $content ?></div>
+                <div class="usa-prose margin-bottom-5">
+                    <p>
+                        <span class="text-white"><?php echo $content ?></span>
+                    </p>
+                </div>
                 <div class="margin-bottom-5">
                     <a href="<?php echo $cta_link ?>" class="usa-button usa-button--big usa-button--white bg-white">
                         <span class="display-flex flex-align-center">

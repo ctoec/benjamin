@@ -236,7 +236,8 @@ i.e.
 .usa-prose {
   font-size: 1.125rem;
   
-  h1 {
+  > h1 {
+    font-size: 3.5rem;
     line-height: 1.15;
   }
   
