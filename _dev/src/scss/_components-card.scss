@@ -3,12 +3,15 @@
 	  flex-wrap: wrap;
 	  
 	  &-title {
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 		font-weight: 700;
+		color: #1b1b1b;
+		line-height: 1.25;
+		margin-bottom: .5rem;
 	  }
 	  
 	  &-card {
-		border-color: rgb(97,54,111);
+		border-color: #61366F;
 		border-radius: .25rem;
 		padding: 2rem;
 		box-shadow: .1rem .25rem 1.25rem rgba(97,54,111,.1);
@@ -32,7 +35,7 @@
 		margin-bottom: .275rem;
 		
 		.ct-callout-card {
-		  border-left-width: 4px;
+		  border-left-width: .375rem;
 		  border-left-style: solid;
 		  display: flex;
 		  margin-bottom: .275rem;

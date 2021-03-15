@@ -27,8 +27,8 @@ if(!$hide_content):
     <?php if ($has_image) { ?>
         <div class="ct-hero">
             <div class="ct-hero-title">
-                <div class="grid-container width-full">
-                    <h1 class="margin-0 margin-bottom-1 font-heading-3xl line-height-mono-1 maxw-mobile-lg"><?php the_title() ?></h1>
+                <div class="grid-container width-full usa-prose">
+                    <h1 class="margin-0 margin-bottom-1 font-heading-3xl maxw-mobile-lg"><?php the_title() ?></h1>
                 </div>
             </div>
             <div class="ct-hero-image">
@@ -54,7 +54,7 @@ if(!$hide_content):
             <div class="usa-prose <?php echo esc_attr($main_width); ?>">
                 <?php if(!$has_image): ?>
                     <div class="margin-top-neg-05">
-                        <h1 class="margin-0 margin-bottom-1 font-heading-3xl line-height-mono-1"><?php the_title() ?> test</h1>
+                        <h1 class="margin-0 margin-bottom-1 font-heading-3xl"><?php the_title() ?></h1>
                     </div>
                 <?php endif; ?>
                 <?php

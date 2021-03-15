@@ -235,6 +235,73 @@ i.e.
 
 .usa-prose {
   font-size: 1.125rem;
+  
+  h1 {
+    line-height: 1.15;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #61366F;
+    line-height: 1.25;
+    margin-top: 1.5rem;
+    margin-bottom: .75rem;
+  }
+  
+  h3 {
+    font-size: 1.65rem;
+    font-weight: bold;
+    color: #1b1b1b;
+    line-height: 1.25;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #61366F;
+    line-height: 1.25;
+    margin-top: .75rem;
+    margin-bottom: .5rem;
+  }
+  
+  h5 {
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #1b1b1b;
+    line-height: 1.25;
+    margin-top: .5rem;
+    margin-bottom: .25rem;
+  }
+  
+  h6 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #61366F;
+    line-height: 1.25;
+    margin-top: .5rem;
+    margin-bottom: .25rem;
+  }
+  
+  p {
+    font-size: 1.125rem;
+    font-weight: regular;
+    color: #1b1b1b;
+    line-height: 1.75;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+  }
+  
+  ul {
+    font-size: 1.125rem;
+    font-weight: regular;
+    color: #1b1b1b;
+    line-height: 1.75;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
 
   figure {
     margin-left: 0;
@@ -259,6 +326,7 @@ i.e.
 }
 
 .bg-footer {
+  margin-top: 5rem;
   background-color: #053756;
 }
 
