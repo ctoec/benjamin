@@ -120,8 +120,26 @@ i.e.
   margin-left: auto;
   color: #fff;
   position: relative;
+
+  &-label {
+    border: .25rem solid transparent;
+  }
+
   input {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+
+    &:focus~.ct-translations-label {
+      border-color: #2491ff;
+    }
+
     &:checked~.ct-translations-label {
       background-color: #162e51;
     }
@@ -236,53 +254,55 @@ i.e.
 .usa-prose {
   font-size: 1.125rem;
   
-  > h1 {
-    font-size: 3.5rem;
+  h1 {
+    font-size: 3rem;
     line-height: 1.15;
+    margin: 0;
+    margin-bottom: 1rem;
   }
   
   h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: bold;
     color: #61366F;
     line-height: 1.25;
-    margin-top: 1.5rem;
-    margin-bottom: .75rem;
+    margin-top: 2.75rem;
+    margin-bottom: .25rem;
   }
   
   h3 {
-    font-size: 1.65rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #1b1b1b;
-    line-height: 1.25;
+    line-height: 1.5;
     margin-top: 1rem;
-    margin-bottom: .5rem;
+    margin-bottom: .25rem;
   }
   
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #61366F;
     line-height: 1.25;
-    margin-top: .75rem;
-    margin-bottom: .5rem;
+    margin-top: 1.25rem;
+    margin-bottom: .25rem;
   }
   
   h5 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: bold;
     color: #1b1b1b;
     line-height: 1.25;
-    margin-top: .5rem;
+    margin-top: .75rem;
     margin-bottom: .25rem;
   }
   
   h6 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #61366F;
     line-height: 1.25;
-    margin-top: .5rem;
+    margin-top: .75rem;
     margin-bottom: .25rem;
   }
   

@@ -54,7 +54,7 @@ if(!$hide_content):
             <div class="usa-prose <?php echo esc_attr($main_width); ?>">
                 <?php if(!$has_image): ?>
                     <div class="margin-top-neg-05">
-                        <h1 class="margin-0 margin-bottom-1 font-heading-3xl"><?php the_title() ?></h1>
+                        <h1><?php the_title() ?></h1>
                     </div>
                 <?php endif; ?>
                 <?php

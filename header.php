@@ -17,26 +17,30 @@
         <?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/ct-logo.png" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-4" />'); ?>
     </div>
     <div class="ct-translations">
-        <input type="checkbox" name="ct-translate" id="ct-translate" />
-        <label id="ct-translate-label" class="ct-translations-label" for="ct-translate" tabindex="0">
+        <input type="checkbox" name="ct-translate" id="ct-translate" tabindex="0" title="Toggle translation menu" />
+        <label id="ct-translate-label" class="ct-translations-label" for="ct-translate">
             <?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/globe-americas.svg" class="display-block width-3 height-4" role="presentation" />'); ?>
             <span>Languages</span>
         </label>
         <script>
             // Get arbitrary element with id "my-element"
             var isInside = document.querySelector('#ct-translate-label');
+            var trInput = document.querySelector('#ct-translate');
+
+            trInput.addEventListener('keydown', function(e) {
+                if (e.keyCode === 13) {
+                    trInput.checked = !trInput.checked;
+                }
+            });
             
             // Listen for click events on body
             document.body.addEventListener('click', function (event) {
-                console.log(isInside.contains(event.target) || event.target.id == 'ct-translate');
-                
                 if (isInside.contains(event.target) || event.target.id == 'ct-translate') {
                     return;
                 } else {
                     setTimeout(function() {
-                        let inputTrigger = document.getElementById('ct-translate');
-                        if (inputTrigger.checked) {
-                            inputTrigger.checked = false;
+                        if (trInput.checked) {
+                            trInput.checked = false;
                         } 
                     }, 100);
                 }
