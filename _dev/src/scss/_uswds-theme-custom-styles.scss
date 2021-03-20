@@ -604,6 +604,17 @@ i.e.
   
   table {
     @extend .usa-table;
+    
+    thead {
+      th, td {
+        background-color: rgb(97,54,111);
+        color: rgb(255,255,255);
+      }
+    }
+    
+    th, td {
+      border-color: #cacaca;
+    }
   }
 }
 
