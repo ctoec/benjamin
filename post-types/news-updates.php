@@ -93,7 +93,7 @@ function news_sidebar() {
     'class'         => '',
     'before_widget' => '',
     'after_widget'  => '',
-    'before_title'  => '<h2 class="widgettitle">',
+    'before_title'  => '<h2 class="widget-title">',
     'after_title'   => '</h2>' 
   );
 
@@ -109,7 +109,7 @@ function news_widget() {
     'class'         => '',
     'before_widget' => '',
     'after_widget'  => '',
-    'before_title'  => '<h2 class="widgettitle">',
+    'before_title'  => '<h2 class="widget-title">',
     'after_title'   => '</h2>' 
   );
 

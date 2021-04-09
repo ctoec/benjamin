@@ -8,9 +8,9 @@
     $isLeft = $location === 'left';
 ?>
 
-<div class="b padding-y-8<?php if($theme == 'grey') { ?> bg-gray-5<?php } ?>">
+<div class="b padding-y-8<?php if($theme == 'grey') { ?> bg-gray-5<?php } ?> width-full">
     <div class="grid-container">
-        <div class="grid-row flex-align-center">
+        <div class="grid-row flex-align-center width-full">
             <div class="grid-col-fill maxw-tablet order-<?php if ($isLeft) { ?>last desktop:margin-left-7<?php } else { ?>first desktop:margin-right-7<?php } ?>">
                 <h2 class="text-ct-blue font-sans-xl text-normal margin-top-0 line-height-sans-2 text-bold"><?php echo $title ?></h2>
                 <div class="usa-prose">
@@ -32,7 +32,7 @@
                                     $link_text = block_sub_value( 'link-text' );
                                     $link_url = block_sub_value( 'link-url' );
                             ?>
-                                    <li class="padding-top-1 padding-right-3">
+                                    <li class="padding-top-1 usa-prose">
                                         <a href="<?php echo($link_url) ?>" class="text-no-underline">
                                             <span class="grid-row">
                                                 <span class="width-3 margin-right-1 padding-top-1">

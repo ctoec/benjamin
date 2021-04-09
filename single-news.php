@@ -39,7 +39,7 @@ if (! $hide_content) :
             endif;
             ?>
             <div class="usa-prose <?php echo esc_attr($main_width); ?>">
-		<h1 class="text-ct-blue font-sans-xl text-normal margin-top-10"><?php the_title(); ?></h1>
+		<h1><?php the_title(); ?></h1>
 		<div class="margin-top-205">
 			<div class="text-base text-bold font-sans-xs text-uppercase">Last updated <?php the_modified_date('F j, Y'); ?></div>
 		</div>

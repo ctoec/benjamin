@@ -355,6 +355,10 @@ i.e.
   color: #09538B;
 }
 
+.text-oec-purple {
+  color: #61366F;
+}
+
 .usa-sidenav {
   padding-left: 1.75rem;
 }
@@ -362,7 +366,7 @@ i.e.
 .sidebar {
   .menu-trigger {
     &:checked ~ .menu-control div {
-      background-image: url(../img/angle-arrow-up-primary.svg);
+      background-image: url(../img/angle-arrow-up-white.svg);
     }
 
     &:checked ~ .menu-content {
@@ -418,17 +422,30 @@ i.e.
   }
 }
 
+.news-promo-item:not(:last-child) {
+  .news-promo-content {
+    border-bottom: 1px solid #d1d1d1; 
+  }
+}
+
 #filter-trigger {
-  background-image: url(../img/angle-arrow-down.svg);
-  background-position: right center;
+  display: inline-block;
+  background-image: url(../img/angle-arrow-down-white.svg);
+  background-position: right 0.75rem center;
   background-size: 15px;
   background-repeat: no-repeat;
-  padding-right: 2rem;
+  padding-right: 3rem;
+  color: #ffffff;
   font-weight: bold;
   cursor: pointer;
+  background-color: rgb(97,54,111);
+  margin: 0;
+  max-width: 50%;
 
   &.is-active {
-    background-image: url(../img/angle-arrow-up-primary.svg);
+    background-image: url(../img/angle-arrow-up-white.svg);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
@@ -767,6 +784,7 @@ Search filter
 .sf-field-submit {
   input {
     @extend .usa-button;
+    background-color: #61366f;
     margin-top: 0 !important;
   }
 }
@@ -1259,7 +1277,54 @@ a.card-content {
 }
 
 .search-box {
-  background: #E3F2FE;
+  background: #ffffff;
   padding: 2rem;
-  border-bottom: 1px solid #dfe1e2;
+  box-shadow: .1rem .25rem 1.25rem rgba(97,54,111,.1);
+}
+
+.usa-prose.type-news h3 {
+  margin-top: 0;
+}
+
+.home .bg-footer {
+  margin-top: 0;
+}
+
+table img {
+  height: auto;
+}
+
+/*
+----------------------------------------
+Calendar
+----------------------------------------
+*/
+.ll-skin-melon .ui-widget {
+  background: color($theme-color-primary);
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-title,
+.ll-skin-melon .ui-datepicker th {
+  color: #fff;
+  font-weight: bold;
+}
+
+.ll-skin-melon .ui-state-disabled .ui-state-default {
+  color: #DDD;
+}
+
+.ll-skin-melon .ui-datepicker td {
+  background: #fff;
+  
+  span,
+  a {
+    padding: 0.25rem;
+    font-size: 1.125rem;
+    display: block;
+  }
+  
+  a {
+    color: #000;
+    font-weight: bold;
+  }
 }
