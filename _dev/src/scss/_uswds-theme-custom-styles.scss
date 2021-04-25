@@ -101,6 +101,17 @@ i.e.
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  
+  &-logo {
+    position: relative;
+    
+    a {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 60px;
+    }
+  }
 }
 .gsc-search-button.gsc-search-button-v2 {
   display: -webkit-box;
@@ -809,6 +820,7 @@ Primary Nav Customizations
   .usa-logo {
     a {
       cursor: pointer;
+      display: inline-block;
     }
     
     svg {

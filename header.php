@@ -14,6 +14,7 @@
 
 <div class="ct-header display-flex padding-x-2 desktop:padding-x-4">
     <div class="ct-header-logo">
+        <a href="https://portal.ct.gov" title="Go to CT.gov"></a>
         <?php echo('<img src="' . get_template_directory_uri() . '/assets/frontend/img/ct-logo.png" alt="' . get_bloginfo('name', 'display') . '" class="display-block height-4" />'); ?>
     </div>
     <div class="ct-translations">
