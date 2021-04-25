@@ -26,12 +26,16 @@
     <?php } ?>
     <div class="news-promo-content flex-fill padding-bottom-3 margin-top-neg-05">
         <header>
-            <h3 class="font-sans-md line-height-sans-4 margin-top-0 margin-bottom-0">
+            <?php if ($args['hide_categories']) { ?>
+                <h3 class="font-sans-md line-height-sans-4 margin-top-0 margin-bottom-0">
+            <?php } ?>
                 <a href="<?php the_permalink(); ?>" class="text-normal"><?php the_title(); ?></a>
-            </h3>
+            <?php if ($args['hide_categories']) { ?>
+                </h3>
+            <?php } ?>
         </header><!-- .entry-header -->
         <div>
-            <?php if ($hide_categories) { ?>
+            <?php if (!$args['hide_categories']) { ?>
                 <div class="font-sans-md"><?php echo implode(", ", $categories); ?></div>
             <?php } ?>
             <div class="font-sans-sm text-base-light"><?php the_date('m/d/Y'); ?></div>

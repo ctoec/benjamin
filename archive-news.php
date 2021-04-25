@@ -29,6 +29,8 @@ $template = 'news-sidebar';
 
 $terms = get_terms('news-category');
 
+$has_filter = $_GET['_sf_s'] || $_GET['_sf_s'] || $_GET['_sft_news-category'];
+
 if (!$hide_content) :
 ?>
 
@@ -57,6 +59,12 @@ if (!$hide_content) :
                         Filter results
                     </button>
                     
+                    <?php if ($has_filter) : ?>
+                        <div class="margin-left-1">
+                            <a href="/news" class="usa-button usa-button--outline">Clear filters</a>
+                        </div>
+                    <?php endif; ?>
+                    
                     <div class="margin-left-auto">
                         <strong><?php echo $wp_query->found_posts ?></strong> news results
                     </div>
@@ -77,7 +85,9 @@ if (!$hide_content) :
                             * If you want to override this in a child theme, then include a file
                             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
                             */
-                                get_template_part('template-parts/feed/news', get_post_format());
+                                get_template_part('template-parts/feed/news', get_post_format(), array( 
+                                    'hide_categories' => false
+                                ));
                             endwhile;
 
                         else :

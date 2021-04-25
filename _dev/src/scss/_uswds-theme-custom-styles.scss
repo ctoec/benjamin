@@ -109,7 +109,7 @@ i.e.
       position: absolute;
       top: 0;
       bottom: 0;
-      width: 60px;
+      width: 60px;  
     }
   }
 }
@@ -434,9 +434,7 @@ i.e.
 }
 
 .news-promo-item:not(:last-child) {
-  .news-promo-content {
-    border-bottom: 1px solid #d1d1d1; 
-  }
+  border-bottom: 1px solid #d1d1d1; 
 }
 
 #filter-trigger {

@@ -27,7 +27,7 @@
                             while ( $query->have_posts() ) {
                                 $query->the_post();
                                 get_template_part('template-parts/feed/news', get_post_format(), array( 
-                                  'hidecategories' => true
+                                  'hide_categories' => true
                                 ));
                             }
                             wp_reset_postdata();
