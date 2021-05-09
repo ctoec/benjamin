@@ -29,7 +29,7 @@ $template = 'news-sidebar';
 
 $terms = get_terms('news-category');
 
-$has_filter = $_GET['_sf_s'] || $_GET['_sf_s'] || $_GET['_sft_news-category'];
+$has_filter = $_GET['_sf_s'] || $_GET['_sf_s'] || $_GET['_sft_news-category'] || $_GET['post_date'];
 
 if (!$hide_content) :
 ?>
@@ -56,17 +56,16 @@ if (!$hide_content) :
                 <p class="margin-bottom-3">Stay up to date on OEC’s work. Get the latest news on our programs, regulations, events, and more.</p>
                 <div class="display-flex margin-bottom-3 flex-align-center">
                     <button id="filter-trigger" class="usa-button">
-                        Filter results
+                        Filter News
                     </button>
                     
-                    <?php if ($has_filter) : ?>
-                        <div class="margin-left-1">
-                            <a href="/news" class="usa-button usa-button--outline">Clear filters</a>
-                        </div>
-                    <?php endif; ?>
-                    
-                    <div class="margin-left-auto">
-                        <strong><?php echo $wp_query->found_posts ?></strong> news results
+                    <div class="margin-left-auto display-flex flex-align-center">
+                        <div><strong><?php echo $wp_query->found_posts ?></strong> results</div>
+                        <?php if ($has_filter) : ?>
+                            <div class="margin-left-1">
+                                <a href="/news">Remove filters</a>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div id="filter-content" class="search-box margin-top-neg-3 margin-bottom-3">
@@ -123,6 +122,63 @@ if (!$hide_content) :
             field.datepicker('hide').datepicker('show');
         }            
       }, 50);
+    });
+    
+    var datePickers = jQuery('.sf-datepicker');
+    var validateRange = function() {
+        if (jQuery(datePickers[0]).val() !== '' && jQuery(datePickers[1]).val() !== '') {
+            var fromDate = new Date(jQuery(datePickers[0]).val());
+            var toDate = new Date(jQuery(datePickers[1]).val());
+            
+            console.log(fromDate, toDate);
+            
+            // Clear any errors
+            jQuery(datePickers[1]).parent('label').find('.form-error').remove();
+            
+            if (fromDate.getDay() && toDate.getDay() && fromDate < toDate) {
+                console.log('Valid date range');
+                jQuery('input[name=_sf_submit]').prop( "disabled", false );
+            } else {
+                jQuery(datePickers[1]).parent('label').append('<div class="form-error">Please enter a valid date range</div>');
+                jQuery('input[name=_sf_submit]').prop( "disabled", true );
+            }
+        }
+    }
+    
+    jQuery('.sf-datepicker').blur(function() {
+        var dateString = jQuery(this).val();
+        
+        if (dateString !== '') {
+            var datesArray = dateString.split('/');
+            
+            if (datesArray[0] && datesArray[0].length === 1) {
+                dateString = '0' + dateString;
+                datesArray = dateString.split('/');
+                jQuery(this).val(dateString);
+            }
+            
+            if (datesArray[1] && datesArray[1].length === 1) {
+                if (datesArray[0] && datesArray[1] && datesArray[2]) {
+                    dateString = datesArray[0] + '/0' + datesArray[1] + '/' + datesArray[2];
+                    jQuery(this).val(dateString);   
+                }
+            }
+            
+            var dateDate = new Date(dateString);
+            
+            // Clear any errors
+            jQuery(this).parent('label').find('.form-error').remove();
+            jQuery('input[name=_sf_submit]').prop( "disabled", false );
+            
+            // Add errors
+            if (!(dateDate && dateDate.getDay())) {
+                jQuery(this).parent('label').append('<div class="form-error">Please enter date in MM/DD/YYYY format</div>');
+                jQuery('input[name=_sf_submit]').prop( "disabled", true );
+                return;
+            }
+        }
+        
+        setTimeout(validateRange, 100);
     });
 </script>
 

@@ -40,6 +40,11 @@ i.e.
   margin-bottom:1.25rem!important;
 }
 
+.form-error {
+  color: red;
+  margin-top: 5px;
+}
+
 .ct-hero {
   position: relative;
   min-height: 300px;
@@ -1263,6 +1268,15 @@ a.card-content {
 
   .sf-input-text {
     max-width: 40rem;
+  }
+  
+  .sf-datepicker {
+    padding-left: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' id='Layer_1' x='0' y='0' viewBox='0 0 512 512' xml:space='preserve'%3E%3Cstyle%3E.st0%7Bfill:none;stroke:%23000;stroke-width:32;stroke-linejoin:round%7D.st1%7Bfill:%23000%7D.st2%7Bfill:none;stroke:%2361366f;stroke-width:32;stroke-linecap:round;stroke-linejoin:round%7D%3C/style%3E%3Cpath class='st0' d='M96 80h320c26.5 0 48 21.5 48 48v288c0 26.5-21.5 48-48 48H96c-26.5 0-48-21.5-48-48V128c0-26.5 21.5-48 48-48z'/%3E%3Ccircle class='st1' cx='296' cy='232' r='24'/%3E%3Ccircle class='st1' cx='376' cy='232' r='24'/%3E%3Ccircle class='st1' cx='296' cy='312' r='24'/%3E%3Ccircle class='st1' cx='376' cy='312' r='24'/%3E%3Ccircle class='st1' cx='136' cy='312' r='24'/%3E%3Ccircle class='st1' cx='216' cy='312' r='24'/%3E%3Ccircle class='st1' cx='136' cy='392' r='24'/%3E%3Ccircle class='st1' cx='216' cy='392' r='24'/%3E%3Ccircle class='st1' cx='296' cy='392' r='24'/%3E%3Cpath class='st2' d='M128 48v32M384 48v32'/%3E%3Cpath class='st0' d='M464 160H48'/%3E%3C/svg%3E");
+    background-position: 0.5rem center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
   }
 }
 

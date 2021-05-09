@@ -36,7 +36,9 @@
         </header><!-- .entry-header -->
         <div>
             <?php if (!$args['hide_categories']) { ?>
-                <div class="font-sans-md"><?php echo implode(", ", $categories); ?></div>
+                <?php if ($categories) { ?>
+                    <div class="font-sans-md"><?php echo implode(", ", $categories); ?></div>
+                <?php } ?>
             <?php } ?>
             <div class="font-sans-sm text-base-light"><?php the_date('m/d/Y'); ?></div>
         </div>
