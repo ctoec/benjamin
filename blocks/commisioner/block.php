@@ -14,7 +14,7 @@
     <div class="grid-container width-full">
         <h2 class="text-white text-center font-sans-xl text-normal margin-top-0 line-height-sans-2 text-bold"><?php echo $title ?></h2>
         <div class="grid-row">
-            <div class="tablet:grid-col-7">
+            <div class="tablet:grid-col-8">
                 <div class="usa-prose margin-bottom-5">
                     <p>
                         <span class="text-white"><?php echo $content ?></span>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tablet:grid-col-5 padding-x-5 margin-top-5 tablet:margin-top-0">
+            <div class="tablet:grid-col-4 margin-top-5 tablet:margin-top-0">
                 <div class="tablet:margin-x-auto text-center">
                     <?php if ($image) { ?>
                         <img src="<?php echo wp_get_attachment_url( $image ); ?>" alt="<?php echo $name; ?>" height="200" width="200" />

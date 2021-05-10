@@ -20,7 +20,7 @@
             <?php } ?>
         </div>
         <div class="grid-row">
-            <div class="bg-white overflow-hidden width-full">
+            <div class="bg-white width-full">
                 <div class="width-full">
                     <?php
                         if ( $query->have_posts() ) {

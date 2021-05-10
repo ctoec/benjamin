@@ -11,7 +11,7 @@
                 <h2 class="text-white font-sans-l text-normal margin-top-0 margin-bottom-2 line-height-sans-2"><?php echo $text ?></h2>
                 <div class="b--cta text-white"><?php echo $cta ?></div>
             </div>
-            <div class="desktop:grid-col-4 margin-right-6 margin-top-3 desktop:margin-left-6 desktop:margin-right-0 desktop:margin-top-0">
+            <div class="desktop:grid-col-4 margin-right-6 margin-top-3 desktop:margin-left-6 desktop:margin-right-0 desktop:margin-top-0 text-center">
                 <img src="<?php echo get_template_directory_uri() . '/assets/frontend/img/211.svg'; ?>" alt="211 of Connecticut" class="height-6">
             </div>
         </div>

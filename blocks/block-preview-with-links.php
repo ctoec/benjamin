@@ -33,7 +33,7 @@
                                     $link_url = block_sub_value( 'link-url' );
                             ?>
                                     <li class="padding-top-1 usa-prose">
-                                        <a href="<?php echo($link_url) ?>" class="text-no-underline">
+                                        <a href="<?php echo($link_url) ?>" class="text-no-underline display-inline-block">
                                             <span class="grid-row">
                                                 <span class="width-3 margin-right-1 padding-top-1">
                                                     <img src="<?php echo wp_get_attachment_url( $link_icon ); ?>" alt="<?php echo $link_text; ?>" style="width: 100%; max-height: 25px" />
