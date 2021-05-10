@@ -535,6 +535,10 @@ i.e.
     width: 100vw;
     display: flex;
     flex-direction: column;
+    
+    &--auto {
+      min-height: auto !important;
+    }
 
     @media (min-width: 46em) {
       flex-direction: row-reverse;

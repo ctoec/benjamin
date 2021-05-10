@@ -4,7 +4,7 @@
     $background = block_value( 'background' );
 ?>
 
-<div class="b padding-y-8" style="background-image: url(<?php echo wp_get_attachment_url( $background ); ?>); background-size: cover">
+<div class="b b--auto padding-y-8" style="background-image: url(<?php echo wp_get_attachment_url( $background ); ?>); background-size: cover">
     <div class="grid-container width-full">
         <div class="grid-row flex-align-center width-full">
             <div class="grid-col-12 tablet:grid-col-8 desktop:grid-col-fill">
